@@ -1,0 +1,250 @@
+<div class="back">
+    <div class="prompt">{{Vocabulary}}</div>
+    
+    <div class="typed-answer">
+    {{type:Reading}}
+    </div>
+    
+    <div class="meaning-box">
+    <div class="meaning-text">{{Meaning}}</div>
+    </div>
+    
+    <div class="reading-box">
+    <div class="reading">
+    {{Reading}}
+    </div>
+    
+    <!-- VERB INFO TABLE -->
+    <table class="verbInfo">
+    <tbody>
+    <tr>
+        <th>type</th>
+        <th>action</th>
+        <th>te-form</th>
+        <th>infinitive</th>
+    </tr>
+    <tr>
+        <td>{{verbClass}}</td>
+        <td>{{verbAction}}</td>
+        <td>{{teForm}}</td>
+        <td>{{Infinitive}}</td>
+    </tbody>
+    </table>
+    <br>
+    <!-- VERB INFO TABLE END -->
+    
+    <div class="notes">
+    <div class="notes-title">Conjugation</div>
+    <div class="notes-text">
+    
+    <!-- PRESENT TABLE -->
+    <div>
+    <tablecaption class="tableCaption">Present</tablecaption>
+    <div class="hr"></div>
+    <table class="outerTable">
+    <tbody>
+    <tr>
+    <td>
+    <div class="attitude">Positive</div>
+    <table class="innerTable">
+    <tbody>
+    <tr>
+    <td class="label">plain</td>
+    <td><ruby>{{PresPosPln}}</td>
+    </tr>
+    <tr>
+    <td class="label">polite</td>
+    <td>{{PresPosPol}}</td>
+    </tr>
+    </tbody>
+    </table>
+    <div>&nbsp;</div>
+    <div>
+    <div class="attitude">Negative</div>
+    <table class="innerTable">
+    <tbody>
+    <tr>
+    <td class="label">plain</td>
+    <td>{{PresNegPln}}</td>
+    </tr>
+    <tr>
+    <td class="label">polite</td>
+    <td>{{PresNegPol}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <!-- PRESENT TABLE END -->
+    
+    <br>
+    
+    <!-- PAST IND TABLE -->
+    <div>
+    <tablecaption class="tableCaption">Past</tablecaption>
+    <div class="hr"></div>
+    <table class="outerTable">
+    <tbody>
+    <tr>
+    <td>
+    <div class="attitude">Positive</div>
+    <table class="innerTable">
+    <tbody>
+    <tr>
+    <td class="label">plain</td>
+    <td>{{PastIndPosPln}}</td>
+    </tr>
+    <tr>
+    <td class="label">polite</td>
+    <td>{{PastIndPosPol}}</td>
+    </tr>
+    </tbody>
+    </table>
+    <div>&nbsp;</div>
+    <div>
+    <div class="attitude">Negative</div>
+    <table class="innerTable">
+    <tbody>
+    <tr>
+    <td class="label">plain</td>
+    <td>{{PastIndNegPln}}</td>
+    </tr>
+    <tr>
+    <td class="label">polite</td>
+    <td>{{PastIndNegPol}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <!-- PAST IND TABLE END -->
+    
+    <br>
+    
+    <!-- VOLITIONAL TABLE -->
+    <div>
+    <tablecaption class="tableCaption">Volitional</tablecaption>
+    <div class="hr"></div>
+    <table class="outerTable">
+    <tbody>
+    <tr>
+    <td>
+    <div class="attitude">Positive</div>
+    <table class="innerTable">
+    <tbody>
+    <tr>
+    <td class="label">plain</td>
+    <td>{{VolPosPln}}</td>
+    </tr>
+    <tr>
+    <td class="label">polite</td>
+    <td>{{VolPosPol}}</td>
+    </tr>
+    </tbody>
+    </table>
+    <div>&nbsp;</div>
+    <div>
+    <div class="attitude">Negative</div>
+    <table class="innerTable">
+    <tbody>
+    <tr>
+    <td class="label">plain</td>
+    <td>{{VolNegPln}}</td>
+    </tr>
+    <tr>
+    <td class="label">polite</td>
+    <td>{{VolNegPol}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <!-- VOLITIONAL TABLE END -->
+    
+    <br>
+    
+    <!-- IMPERATIVE TABLE -->
+    <div>
+    <tablecaption class="tableCaption">Imperative</tablecaption>
+    <div class="hr"></div>
+    <table class="outerTable">
+    <tbody>
+    <tr>
+    <td>
+    <div class="attitude">Positive</div>
+    <table class="innerTable">
+    <tbody>
+    <tr>
+    <td class="label">plain</td>
+    <td>{{ImpPosPln}}</td>
+    </tr>
+    <tr>
+    <td class="label">polite</td>
+    <td>{{ImpPosPol}}</td>
+    </tr>
+    </tbody>
+    </table>
+    <div>&nbsp;</div>
+    <div>
+    <div class="attitude">Negative</div>
+    <table class="innerTable">
+    <tbody>
+    <tr>
+    <td class="label">plain</td>
+    <td>{{ImpNegPln}}</td>
+    </tr>
+    <tr>
+    <td class="label">polite</td>
+    <td>{{ImpNegPol}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <!-- IMPERATIVE TABLE END -->
+    
+    </div>
+    </div>
+    </div>
+    
+    <!-- TAGS -->
+    <div id="tags-container"></div>
+    
+    <script>
+        var tagsString = "{{Tags}}";
+        
+        // Split the tags by space
+        var tagsArray = tagsString.split(" ");
+    
+        // Get the container where the tags will be displayed
+        var container = document.getElementById("tags-container");
+    
+        // Loop through each tag, create a span, and assign it a class
+        tagsArray.forEach(function(tag) {
+            var tagElement = document.createElement("span");
+            tagElement.className = "tag-box";
+            tagElement.textContent = tag;
+            container.appendChild(tagElement);
+        });
+    </script>
+    <!-- END TAGS -->
+    
+    
+    </div>
+    

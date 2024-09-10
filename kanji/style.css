@@ -1,0 +1,349 @@
+:root {
+    --color-radical: #00AAFF;
+    --color-radical-dark: #0093DD;
+    --color-radical-gradient: linear-gradient(to bottom, var(--color-radical), var(--color-radical-dark));
+    --color-kanji: #FF00AA;
+    --color-kanji-dark: #DD0093;
+    --color-kanji-gradient: linear-gradient(to bottom, var(--color-kanji), var(--color-kanji-dark));
+    --color-vocab: #AA00FF;
+    --color-vocab-dark: #9300DD;
+    --color-vocab-gradient: linear-gradient(to bottom, var(--color-vocab), var(--color-vocab-dark));
+    --color-reading: #555;
+    --color-reading-dark: #484848;
+    --color-reading-gradient: linear-gradient(to bottom, var(--color-reading), var(--color-reading-dark));
+    }
+    
+    .card {
+      font-family: "DM sans", "Hiragino Sans", "Helvetica", "Arial";
+      font-size: 20px;
+      text-align: center;
+    }
+    
+    .front {
+      color: #fff;
+      background-color: var(--color-kanji);
+        padding: 5px 10px 6px 10px;
+        border-radius: 10px;
+    }
+    
+    .back {
+      color: var(--color-kanji);
+      background-color: #fafafa;
+        border-radius: 10px;
+    }
+    
+    .body-content {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      line-height: 1.55em;
+    }
+    
+    .input-instructions {
+        font-family: "DM sans", "Hiragino Sans", "Helvetica", "Arial";
+      text-align: left;
+      font-size: .75rem;
+    }
+    
+    .prompt {
+      font-size: 7rem;
+      font-kerning: normal;
+        text-shadow: 2px 2px .5px #dd0093;
+    }
+    
+    .mobile .prompt {
+      font-size: 6rem;
+        text-shadow: 0.5px 1.5px 0px #dd0093;
+    }
+    
+    
+    .typed-answer {
+     font-size: 4rem;
+     padding-bottom: 20px;
+    }
+    
+    .reading-box {
+      border: dashed 1px;
+        border-color: #2a1b0a;
+        color: #2a1b0a;
+        margin: 15px 10px 0px 10px;
+        padding: 20px 0px 0px 0px;
+        background-color: #eee5dc;
+        border-radius: 10px;
+    }
+    
+    .notes {
+     border: dashed 2px;
+     border-collapse: collapse;
+     line-height: 1.5rem;
+     margin: 20px 10px 10px 10px;
+     padding: 0 0 20px 0;
+     border-color: #333;
+     border-radius: 10px;
+    }
+    
+    .notes-title {
+      padding: 20px 0 5px 20px;
+      font-size: 20px;
+      text-align: left;
+      color: #444444;
+    }
+    
+    .notes-text {
+      font-size: .8em;
+      padding: 0px 15px 15px 20px;
+      text-align: left;
+      color: #000;
+    }
+    
+    /* HINTS BOX */
+    
+    .hintsBox {
+      margin: 7px 0px 0px 0px;
+      padding: 1px 10px 8px 10px;
+      border-radius: 5px;
+      color: #5d554f;
+        background-color: #E5DAD0;
+        line-height: 1.5em;
+    }
+    
+    .hintsBox p:nth-of-type(2) {
+      margin-top: -8px;
+      margin-bottom: 3px;
+    }
+    
+    .hintsBox .title {
+      font-weight: bold;
+    }
+    
+    .hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #444444;
+        margin: 0 20px 10px 20px;
+        padding: 0;
+    }
+    
+    input[type=text] {
+      width: 100%;
+      text-align: center;
+      padding: 12px 0px;
+      font-size: 25px;
+    }
+    
+    .replay-button svg {
+      width: 15px;
+      height: 15px;
+      stroke-width: 3px; 
+    }
+    
+    .replay-button svg circle {
+      fill: transparent;
+    }
+    
+    .replay-button svg path {
+      fill: #444444;
+    }
+    
+    /* MEANING & READING SECTION */
+    
+    .meaning-text{
+        font-family: "Couier New", monospace;
+        font-weight: bold;
+        color: #000000;
+        font-size: 1em;
+        text-align: center;
+    }
+    
+    .meaning-box {
+     border: dashed 1px;
+     margin: 10px 10px 10px 10px;
+     padding: 10px 0px 10px 0px;
+     border-color: #333;
+     border-radius: 10px;
+    }
+    
+    .reading {
+        font-family: "Noto Sans";
+        font-size: .8em;
+        text-align: center;
+        padding: 5px 0px 0px 0px;
+        color: #2a1b0a;
+    }
+    
+    /* CARD FRONT HINTS */
+    
+    .button {
+        padding: 4px 16px;
+    }
+        
+    button:after {
+        font-size: 15px;
+        padding: 0px 50px 0px 50px;
+        content: "Show reading hint";
+    }
+    
+    .r-hint-box {
+        border: dashed 1px;
+        margin: 10px 50px 10px 50px;
+        padding: 0px 20px 0px 20px;
+        border-color: #222;
+        background-color: #777;
+    }
+    
+    .r-hint-text {
+        font-size: 15px;
+        padding: 10px 0px 10px 0px;
+        color: #fff;
+    }
+    
+    
+    /* STROKE ORDER */
+    
+    .strokeContainer {
+        margin: 0.0em 0.5em 0.0em 0.5em;
+        padding: 0.0em 0.0em;
+        border-radius: 8px;
+        background-color: #E5DAD0;
+    }
+    
+    .strokeImage {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+        width: 200px;
+    }
+    
+    /* READINGS TABLE */
+    
+    .rdgsTable {
+        color: #5d554f;
+        font-size: .8em;
+        background-color: #E5DAD0;
+        border-radius: 6px;
+        text-align: left;
+        border-collapse: collapse;
+        margin-left: 15px;
+        margin-right:15px;
+        padding-top: 5px;
+    }
+    
+    .rdgsTableRow {
+        display: table-row;
+    }
+    
+    .rdgsTableHeading {
+        display: table-header-group;
+    }
+    
+    .rdgsTableCell, .rdgsTableHead {
+        border: 0px;
+        display: table-cell;
+        padding: 3px 10px;
+    }
+    
+    .rdgsLeft {	
+        border: 0px;
+      padding: 3px 20px;
+    }
+    
+    .rdgsTableHeading {
+        display: table-header-group;
+        font-weight: bold;
+    }
+    
+    .rdgsTableBody {
+        display: table-row-group;
+    }
+    
+    .oRdng-box {
+      font-size: 0.8em;
+      border: solid 1px brown;
+      border-radius: 5px;
+      text-align: left;
+      border-color: #d7c7ba;
+      padding: 3px 3px 1px 3px;
+      margin-right: 2px;
+        margin-bottom: 2px;
+      display: inline-flex;
+    }
+    
+    #oRdng-container {
+      margin-bottom: 5px;
+    }
+    
+    .kRdng-box {
+      font-size: 0.8em;
+      border: solid 1px brown;
+      border-radius: 5px;
+      text-align: left;
+      border-color: #d7c7ba;
+      padding: 3px 3px 1px 3px;
+      margin-right: 2px;
+        margin-bottom: 2px;
+      display: inline-flex;
+    }
+    
+    #kRdng-container {
+      margin-bottom: 5px;
+    }
+    
+    /* TAG CONTAINER */
+    
+    .tag-box {
+         font-family: Monospace;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      border: 1px solid;
+      border-color: #d9d9d9;
+      display: inline-block;
+      font-size: .7em;
+      height: 15px;
+      padding: 5px;
+      margin: 3px;
+      text-align: center;
+    }
+    
+    #tags-container {
+        margin: 6px;
+    }
+    
+    /* COLOR FORMATS */
+    
+    .no-break {
+      white-space: nowrap;
+      white-space-collapse: collapse;
+      text-wrap: nowrap;
+    }
+    
+    mark {
+      color: #ffffff;
+      border-radius: 4px;
+      display: inline-block;
+      height: .95em;
+      line-height: 1em;
+      padding: 3px 3px 4px 3px;
+      text-align: center;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2)inset;
+    }
+    
+    mark.kanji {
+      background: var(--color-kanji-gradient);
+    }
+    
+    mark.radical {
+      background: var(--color-radical-gradient);
+    }
+    
+    mark.vocab {
+      background: var(--color-vocab-gradient);
+    }
+    
+    mark.rdng {
+      background: var(--color-reading-gradient);
+    }
+    
+    #comp-contents mark {
+      margin: 0px 2px 0px 0px; 
+    }

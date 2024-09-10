@@ -1,0 +1,248 @@
+/* GLOBAL FORMATTING */
+
+.card {
+    font-family: "DM sans", "Hiragino Sans", "Helvetica", "Arial";
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .front {
+      background-color: #A8C6D0;
+      border-radius: 15px;
+      padding: 5px 10px 6px 10px;
+  }
+  
+  .back {
+    background-color: #A8C6D0;
+      border-radius: 15px;
+    padding: 5px 10px 6px 10px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0px;
+    font-size: 25px;
+      border-radius: 15px;
+  }
+  
+  .typed-answer {
+   font-family: Monospoace;
+   font-size: 4rem;
+   padding-bottom: 20px;
+  }
+  
+  .input-instructions {
+      font-family: "DM sans", "Hiragino Sans", "Helvetica", "Arial";
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  .prompt {
+    font-size: 7rem;
+    font-kerning: normal;
+    font-feature-settings: "palt";
+      --text-fg: #575e6f;
+    --text-bg: rgba(127, 158, 169, .7);
+      text-shadow: 0.2rem 0.2rem 0 var(--text-bg);
+  }
+  
+  .mobile .prompt{
+    font-size: 5rem;
+  }
+  
+  .hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #c3b3aa;
+      margin: 3px 10px 0px 10px;
+      padding: 0px 0px 0px 0px;
+  }
+  
+  .replay-button svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 3px;  
+  }
+  
+  .replay-button svg circle {
+    fill: transparent;
+  }
+  
+  .replay-button svg path {
+    fill: #444444;
+  }
+  
+  /* MEANING SECTION */
+  
+  .meaning-text{
+      font-family: "Couier New", monospace;
+      font-weight: bold;
+      color: #555c6e;
+    --text-bg: rgba(255, 255, 255, .5);
+      text-shadow: 0.1rem 0.1rem 0 var(--text-bg);
+    font-size: 1.1em;
+      margin: 0px 20px 0px 20px;
+  }
+  
+  .meaning-box {
+   margin: 10px 10px 10px 10px;
+   padding: 10px 0px 10px 0px;
+   border-radius: 15px;
+   background: #F6E2D7;
+   box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 0px 0px;
+  
+  }
+  
+  /* READING SECTION */
+  
+  .reading-box {
+    border: dashed 1px;
+      border-color: #2a1b0a;
+      color: #2a1b0a;
+      margin: 10px 10px 10px 10px;
+      padding: 10px 0px 0px 0px;
+      border-radius: 15px;
+      background-color: #F5F5F5;
+  }
+  
+  .reading {
+      font-family: "Noto Sans";
+      font-size: 40px;
+      text-align: center;
+      color: #2a1b0a;
+    padding: 0px 0px 15px 0px;
+  }
+  
+  
+  /* CONJUGATION SECTION */
+  
+  .notes {
+   border: 0px;
+   margin: 20px 10px 10px 10px;
+   padding: 0 0 20px 0;
+   border-radius: 10px;
+   border-color: #333;
+  }
+  
+  .notes-title {
+    padding: 0px 0px 15px 15px;
+    font-size: 20px;
+      font-weight: bold;
+    text-align: left;
+    color: #222;
+  }
+  
+  .notes-text {
+    font-size: 16px;
+    padding: 0px 15px 15px 20px;
+    text-align: left;
+    color: #000;
+  }
+  
+  .hints-box {
+      color: #444444;
+      font-size: 15px;
+      margin: 5px 5px 0px 0px;
+      padding: 1px 5px 15px 10px;
+      background-color: #E4E4E4;
+  }
+  
+  /* VERB INFO TABLE */
+  .verbInfo {
+    font-family: "Open Sans", sans-serif;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 14px;
+    line-height: 1.5em;
+    padding: 0.0em 0.0em;
+      font-size: 0.75em;
+    color: #222;
+      width: 90%;
+      border-collapse: collapse;
+      border: 1px solid #bbb;
+  }
+  
+  .verbInfo th {
+      background: #ddd;
+      border-bottom: 1px solid #bbb;
+  }
+  
+  /* CONJUGATION TABLE */
+  
+  .outerTable {
+    font-family: "Open Sans", sans-serif;
+    border-radius: 10px;
+    line-height: 1.25em;
+    padding: 0.3em 0.3em;
+    color: #222;
+  }
+  
+  .label {
+    font-size: 0.75em;
+      font-family: monospace;
+  }
+  
+  .attitude {
+    font-size: .9em;
+      font-style: oblique;
+      color: #222;
+      padding: 0.0em .3em;
+  }
+  
+  .tableCaption {
+    padding: 0.425em 0.6em;
+      color: #222;
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .outerTable tr {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .outerTable td {
+    background: #F6E2D7;
+    padding: 0.5em 0.5em;
+    color: #000;
+    border-radius: 10px;
+      ertical-align: bottom;
+  }
+  
+  .outerTable th {
+    padding: 0.0em;
+    font-size: .9em;
+  }
+  
+  .innerTable {
+      padding: 0.3em .3em;
+  }
+  
+  .innerTable td {
+    border-radius: 5px;
+      padding: 0.3em .3em;
+      vertical-align: bottom;
+  }
+  
+  /* TAG CONTAINER */
+  
+  .tag-box {
+   font-family: Monospace;
+   color: #000;
+   background-color: #f9f9f9;
+   border-radius: 4px;
+   border: 1px solid;
+   border-color: #d9d9d9;
+   display: inline-block;
+   font-size: .7em;
+   height: 15px;
+   padding: 5px;
+   margin: 3px;
+   text-align: center;
+  }
+  
+  #tags-container {
+   margin: 6px;
+  }
