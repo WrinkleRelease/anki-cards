@@ -22,3 +22,6 @@ The Vocab note-type contains the following fields
 - Reading Notes
 - Stroke Order
 - Reading Hint
+
+## Screenshots
+![Kanji Card Back](https://github.com/user-attachments/assets/d291c756-bb8c-41d3-92d5-e6701acf79a3)
