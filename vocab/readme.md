@@ -23,3 +23,6 @@ The Vocab note-type contains the following fields
 - Patterns of Use
 - Context
 - Reading Hint
+
+## Screenshots
+![Vocab Card Back](https://github.com/user-attachments/assets/a7e7045f-3986-4d8d-a5e5-e3669e5e4703)
