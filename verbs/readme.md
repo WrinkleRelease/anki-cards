@@ -28,7 +28,7 @@ The Verb note-type contains the following fields
 - PastIndNegPol
 - VolPolPln
 - VolPosPol
-- VolNegPln
+- VolNegPln 
 - VolNegPol
 - ImpPosPln
 - ImpPosPol
@@ -36,4 +36,4 @@ The Verb note-type contains the following fields
 - ImpNegPol
 
 ## Screenshots
-![Vocab Card Back](https://github.com/user-attachments/assets/a7e7045f-3986-4d8d-a5e5-e3669e5e4703)
+![Verb Card Back](https://github.com/user-attachments/assets/84e0079e-d26e-4c73-9a8d-9de655a51c8a)
