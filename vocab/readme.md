@@ -7,6 +7,14 @@ The `front` contains an input field that asks for the `Reading` of the words, no
 
 The `front` also contains a clickable field with a hint.
 
+## Back Features
+Context sentencecs now have their translations hidden inside a `<details>` tag. 
+Example:
+<details>
+<summary>この川はアマゾン川です。</summary>
+This river is the Amazon River.
+</details>
+
 ## JavaScript
 A few JavaScript code blocks embedded in the HTML allow for several fields in my cards to be pulled in as strings, separated, then formatted and displayed back onto the card in tidy little boxes.
 

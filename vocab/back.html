@@ -1,124 +1,124 @@
 <div class="back">
-    <div class="prompt">{{Vocabulary}}</div>
-    
-    <div class="typed-answer">
-    {{type:Reading}}
-    </div>
-    
-    <!-- MEANING & READING -->
-    <div class="meaning-box">
-        <div class="meaning-text">
-        {{Meaning}}
-        </div>
-        <div class="reading">
-        {{Reading}}
-        </div>
-    </div>
-    
-    <!-- READING BOX CONTENTS -->
-    <div class="reading-box">
-    
-    
+  <div class="prompt">{{Vocabulary}}</div>
+
+  <div class="typed-answer">{{type:Reading}}</div>
+
+  <!-- MEANING & READING -->
+  <div class="meaning-box">
+    <div class="meaning-text">{{Meaning}}</div>
+    <div class="reading">{{Reading}}</div>
+  </div>
+
+  <!-- READING BOX CONTENTS -->
+  <div class="reading-box">
     <div class="notes">
-    <div class="notes-title">Meaning Notes</div>
-    <div class="hr"></div>
-    
-    <div class="notes-text">
-    
-    <div class="hintsBox">
-      <p><span class="title">Word Type</span></p>
-      <div id="wtype-container"></div>
+      <div class="notes-title">Meaning Notes</div>
+      <div class="hr"></div>
+
+      <div class="notes-text">
+        <div class="hintsBox">
+          <p><span class="title">Word Type</span></p>
+          <div id="wtype-container"></div>
+        </div>
+
+        <div class="hintsBox">
+          <p><span class="title">Components</span></p>
+          <p id="comp-contents">{{Components}}</p>
+        </div>
+        {{Meaning Notes}}
+      </div>
+
+      <div class="notes-title">Reading Notes</div>
+      <div class="hr"></div>
+
+      <div class="notes-text">
+        <div class="hintsBox">
+          <p><span class="title">{{Reading Type}}</span></p>
+          <p>{{Reading}}</p>
+        </div>
+        {{Reading Notes}}
+      </div>
+
+      <!-- CONTEXT SENTENCES -->
+      <div class="notes-title">Context</div>
+      <div class="hr"></div>
+      <div class="notes-text">
+        <div class="hintsBox">
+          <p><span class="title">Patterns of Use</span></p>
+          <div id="patterns-container"></div>
+        </div>
+        <div id="sentence-pairs">
+          <details>
+            <summary class="s1">{{s1Japanese}}</summary>
+            <span class="translation">{{s1English}}</span>
+          </details>
+          <br />
+          <details>
+            <summary class="s2">{{s2Japanese}}</summary>
+            <span class="translation">{{s2English}}</span>
+          </details>
+          <br />
+          <details>
+            <summary class="s2">{{s3Japanese}}</summary>
+            <span class="translation">{{s3English}}</span>
+          </details>
+        </div>
+      </div>
+
+      <!-- END READING BOX -->
     </div>
-    
-    <div class="hintsBox">
-      <p><span class="title">Components</span></p>
-      <p id="comp-contents">{{Components}}</p>
-    </div>
-    {{Meaning Notes}}
-    </div>
-    
-    <div class="notes-title">Reading Notes</div>
-    <div class="hr"></div>
-    
-    <div class="notes-text">
-    
-    <div class="hintsBox">
-      <p><span class="title">{{Reading Type}}</span></p>
-      <p>{{Reading}}</p>
-    </div>
-    {{Reading Notes}}
-    </div>
-    
-    <div class="notes-title">Context</div>
-    <div class="hr"></div>
-    <div class="notes-text">
-    <div class="hintsBox">
-      <p><span class="title">Patterns of Use</span></p>
-    <div id="patterns-container"></div>
-    </div>
-    <div class="content">{{Context}}</div>
-    
-    </div>
-    <!-- END READING BOX -->
-    
-    </div>
-    
-    <!-- FOOTNOTE -->
-    <!-- END FOOTNOTE -->
-    
-    
+
+    <! -- TAGS -->
     <div id="tags-container"></div>
-    
-    <!-- JS CODE -->
+
+    <! -- JavaScript -->
+
     <script>
-             // TAG SEPARATOR //
-        var tagsString = "{{Tags}}";
-        
-        // Split the tags by space
-        var tagsArray = tagsString.split(" ");
-    
-        // Get the container where the tags will be displayed
-        var container = document.getElementById("tags-container");
-    
-        // Loop through each tag, create a span, and assign it a class
-        tagsArray.forEach(function(tag) {
-            var tagElement = document.createElement("span");
-            tagElement.className = "tag-box";
-            tagElement.textContent = tag;
-            container.appendChild(tagElement);
-        });
-    
-       // PATTERNS-OF-USE SEPARATOR //
-        var patternString = "{{Patterns of Use}}";
-        
-        var patternArray = patternString.split(",");
-    
-        var container = document.getElementById("patterns-container");
-    
-        patternArray.forEach(function(pattern) {
-            var patternElement = document.createElement("span");
-            patternElement.className = "use-patterns";
-            patternElement.textContent = pattern;
-            container.appendChild(patternElement);
-        });
-    
+      // TAG SEPARATOR //
+      var tagsString = "{{Tags}}";
+
+      // Split the tags by space
+      var tagsArray = tagsString.split(" ");
+
+      // Get the container where the tags will be displayed
+      var container = document.getElementById("tags-container");
+
+      // Loop through each tag, create a span, and assign it a class
+      tagsArray.forEach(function (tag) {
+        var tagElement = document.createElement("span");
+        tagElement.className = "tag-box";
+        tagElement.textContent = tag;
+        container.appendChild(tagElement);
+      });
+
+      // PATTERNS-OF-USE SEPARATOR //
+      var patternString = "{{Patterns of Use}}";
+
+      var patternArray = patternString.split(",");
+
+      var container = document.getElementById("patterns-container");
+
+      patternArray.forEach(function (pattern) {
+        var patternElement = document.createElement("span");
+        patternElement.className = "use-patterns";
+        patternElement.textContent = pattern;
+        container.appendChild(patternElement);
+      });
+
       // WORD TYPE SEPARATOR //
-        var wtypeString = "{{Word Type}}";
-        
-        var wtypeArray = wtypeString.split(",");
-    
-        var container = document.getElementById("wtype-container");
-    
-        wtypeArray.forEach(function(wtype) {
-            var wtypeElement = document.createElement("span");
-            wtypeElement.className = "word-type";
-            wtypeElement.textContent = wtype;
-            container.appendChild(wtypeElement);
-        });
+      var wtypeString = "{{Word Type}}";
+
+      var wtypeArray = wtypeString.split(",");
+
+      var container = document.getElementById("wtype-container");
+
+      wtypeArray.forEach(function (wtype) {
+        var wtypeElement = document.createElement("span");
+        wtypeElement.className = "word-type";
+        wtypeElement.textContent = wtype;
+        container.appendChild(wtypeElement);
+      });
     </script>
-    
-    <!-- JS CODE -->
-    
-    </div>
-    <br>
-    </div>
+  </div>
+  <br />
+</div>
