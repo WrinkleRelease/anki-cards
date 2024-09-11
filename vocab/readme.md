@@ -9,7 +9,7 @@ The `front` also contains a clickable field with a hint.
 
 ## Back Features
 An external JavaScript file named `_script.js` is called from the `collection.media` folder to handle parsing and formatting of the `Context` section. It presents Japanese language and English translation sentence pairs nested in an HTML `<details>` tag to hide the translation until needed. 
-HTML Details Example:
+
 <details>
 <summary>この川はアマゾン川です。</summary>
 This river is the Amazon River.
