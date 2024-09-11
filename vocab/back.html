@@ -1,3 +1,5 @@
+<script src="_script.js"></script>
+
 <div class="back">
   <div class="prompt">{{Vocabulary}}</div>
 
@@ -47,22 +49,8 @@
           <p><span class="title">Patterns of Use</span></p>
           <div id="patterns-container"></div>
         </div>
-        <div id="sentence-pairs">
-          <details>
-            <summary class="s1">{{s1Japanese}}</summary>
-            <span class="translation">{{s1English}}</span>
-          </details>
-          <br />
-          <details>
-            <summary class="s2">{{s2Japanese}}</summary>
-            <span class="translation">{{s2English}}</span>
-          </details>
-          <br />
-          <details>
-            <summary class="s2">{{s3Japanese}}</summary>
-            <span class="translation">{{s3English}}</span>
-          </details>
-        </div>
+        <div id="context-sentences">{{Context}}</div>
+        <div id="parsed-sentences"></div>
       </div>
 
       <!-- END READING BOX -->
