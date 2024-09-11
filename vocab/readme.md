@@ -33,4 +33,5 @@ The Vocab note-type contains the following fields
 - Reading Hint
 
 ## Screenshots
-![Vocab Card Back](https://github.com/user-attachments/assets/a7e7045f-3986-4d8d-a5e5-e3669e5e4703)
+![Vocab Card Back](https://github.com/user-attachments/assets/f7871c81-ea5a-46e5-856f-977cb4dcb2b9)
+
