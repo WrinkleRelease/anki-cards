@@ -20,8 +20,11 @@ for (let i = 0; i < foreignSentences.length; i++) {
     : "";
   detailsElement.appendChild(divElement);
 
+  // Output everything to document. 
+  // All elements have been appended to detailsElement and are waiting to be put on the page.
   parsedSentences.appendChild(detailsElement);
 
+  // Add <br> elements between each <detail> element save the last.
   if (i < foreignSentences.length - 1) {
     const lineBreak = document.createElement("br");
     parsedSentences.appendChild(lineBreak);
