@@ -1,8 +1,10 @@
+<!-- Calls the JS code to handle parsing and inserting the forgeign/translation sentence pairs into the CONTEXT section of the card. Anki doesn't implement this correctly and its use is hit or miss. -->
 <script src="_script.js"></script>
 
 <div class="back">
   <div class="prompt">{{Vocabulary}}</div>
 
+  <!-- Show the answer that user typed -->
   <div class="typed-answer">{{type:Reading}}</div>
 
   <!-- MEANING & READING -->
@@ -49,6 +51,7 @@
           <p><span class="title">Patterns of Use</span></p>
           <div id="patterns-container"></div>
         </div>
+        <!-- The code to parse and display these sentences correctly is pulled from _scripts.js -->
         <div id="context-sentences">{{Context}}</div>
         <div id="parsed-sentences"></div>
       </div>

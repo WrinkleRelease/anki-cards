@@ -189,6 +189,7 @@ td {
 }
 
 /* HINTS BOX */
+/* hintsBox is also called from a few Note fields using HTML */
 
 .hintsBox {
   margin: 7px 0px 5px 0px;
@@ -240,7 +241,7 @@ td {
   margin-right: 5px;
 }
 
-/* CARD FRONT HINTS */
+/* FRONT READING HINTS */
 
 .button {
   padding: 4px 16px;
@@ -251,8 +252,6 @@ button:after {
   padding: 0px 50px 0px 50px;
   content: "Show reading hint";
 }
-
-/* FRONT READING HINTS */
 
 .r-hint-box {
   border: dashed 1px;
