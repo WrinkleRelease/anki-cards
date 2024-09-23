@@ -107,13 +107,15 @@
     color: #ffffff;
     border-radius: 4px;
     display: inline-block;
-    height: .9em;
+    height: 0.95em;
     line-height: 1em;
     padding: 3px 3px 4px 3px;
     text-align: center;
-    margin: 0rem 0rem;
+    margin: 0px 1px;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2)inset;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
+    white-space: nowrap;
+    text-wrap: nowrap;
   }
   
   mark.kanji {
