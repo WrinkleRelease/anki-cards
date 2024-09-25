@@ -257,11 +257,12 @@ button:after {
 }
 
 .r-hint-box {
-  border: dashed 1px;
-  margin: 10px 50px 10px 50px;
-  padding: 0px 20px 0px 20px;
-  border-color: #222;
-  background-color: #777;
+	border: dashed 1px;
+	border-radius: 5px;
+	margin: 10px 50px 10px 50px;
+	padding: 0px 15px 0px 15px;
+	border-color: #222;
+	background-color: #777;
 }
 
 .r-hint-text {
