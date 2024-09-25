@@ -1,5 +1,6 @@
-/* GLOBAL FORMATTING */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
+/* GLOBAL FORMATTING */
 :root {
   --color-main-text: #292623;
   --color-hintsBox: #5d554f;
@@ -39,7 +40,7 @@ a {
 }
 
 .card {
-  font-family: "DM sans", "Hiragino Sans", "Helvetica", "Arial";
+  font-family: "Helvetica", "Arial";
   font-feature-settings: "palt";
   font-size: 20px;
   text-align: center;
@@ -84,12 +85,14 @@ input[type="text"] {
 }
 
 .prompt {
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 7rem;
   font-kerning: normal;
   text-shadow: 2px 2px 0.5px #9300dd;
 }
 
 .mobile .prompt {
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 4rem;
   text-shadow: 0.5px 1.5px 0px #9300dd;
 }
