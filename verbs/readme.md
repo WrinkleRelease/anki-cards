@@ -2,6 +2,8 @@
 
 This folder contains the HTML for the card `front`, card `back`, and the CSS `styles` section. 
 
+The purpose of this deck is to act as an easy-to-access conjugation repository for verbs on the JLPT N5 through  JLPT N1 exams. The card format might change as I discover which conjugations are most important, or, conversely, are hardly used in normal media.
+
 ## Front Features
 The `front` contains an input field that asks for the `Reading` of the words, not the meaning. Only one input field per side is supported by Anki. 
 
