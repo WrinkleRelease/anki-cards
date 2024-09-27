@@ -1,23 +1,25 @@
-<div class="front">
+<!-- JAPANESE VOCAB CARD -->
+
+<div class="front ipad-format ipad-position">
 
     <div class="prompt">
-    {{Vocabulary}}
+        {{Vocabulary}}
     </div>
-    
-    
+
+
     {{type:Reading}}
-    
-    
-    <button type="button" onclick="document.getElementById('r-hint').style.display = 'block'; this.style.display = 'none';">
+
+
+    <button type="button"
+        onclick="document.getElementById('r-hint').style.display = 'block'; this.style.display = 'none';">
     </button>
-    
-    
+
+
     <div id="r-hint" style="display: none;">
-    <div class="r-hint-box">
-    <div class="r-hint-text">
-    {{Reading Hint}}
+        <div class="r-hint-box">
+            <div class="r-hint-text">
+                {{Reading Hint}}
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-    </div>
-    
+</div>

@@ -1,16 +1,18 @@
-<!-- Calls the JS code to handle parsing and inserting the forgeign/translation sentence pairs into the CONTEXT section of the card. Anki doesn't implement this correctly and its use is hit or miss. -->
+<!-- JAPANESE VOCAB CARD -->
+
 <script src="_script.js"></script>
 
-<div class="back">
+<div class="back ipad-position">
   <div class="prompt">{{Vocabulary}}</div>
 
-  <!-- Show the answer that user typed -->
   <div class="typed-answer">{{type:Reading}}</div>
 
   <!-- MEANING & READING -->
-  <div class="meaning-box">
-    <div class="meaning-text">{{Meaning}}</div>
-    <div class="reading">{{Reading}}</div>
+  <div class="meaning-box ipad-format">
+    <div class="meaning-text">
+      {{Meaning}}</div>
+    <div class="reading">
+      {{Reading}}</div>
   </div>
 
   <!-- READING BOX CONTENTS -->
@@ -19,7 +21,7 @@
       <div class="notes-title">Meaning Notes</div>
       <div class="hr"></div>
 
-      <div class="notes-text">
+      <div class="notes-text ipad-format">
         <div class="hintsBox">
           <p><span class="title">Word Type</span></p>
           <div id="wtype-container"></div>
@@ -35,7 +37,7 @@
       <div class="notes-title">Reading Notes</div>
       <div class="hr"></div>
 
-      <div class="notes-text">
+      <div class="notes-text ipad-format">
         <div class="hintsBox">
           <p><span class="title">{{Reading Type}}</span></p>
           <p>{{Reading}}</p>
@@ -46,12 +48,11 @@
       <!-- CONTEXT SENTENCES -->
       <div class="notes-title">Context</div>
       <div class="hr"></div>
-      <div class="notes-text">
+      <div class="notes-text landscape">
         <div class="hintsBox">
           <p><span class="title">Patterns of Use</span></p>
           <div id="patterns-container"></div>
         </div>
-        <!-- The code to parse and display these sentences correctly is pulled from _scripts.js -->
         <div id="context-sentences">{{Context}}</div>
         <div id="parsed-sentences"></div>
       </div>
@@ -60,56 +61,59 @@
     </div>
 
     <! -- TAGS -->
-    <div id="tags-container"></div>
+      <div id="tags-container"></div>
 
-    <! -- JavaScript -->
+      <! -- JavaScript -->
 
-    <script>
-      // TAG SEPARATOR //
-      var tagsString = "{{Tags}}";
+        <script>
 
-      // Split the tags by space
-      var tagsArray = tagsString.split(" ");
+          // TAG SEPARATOR //
+          var tagsString = "{{Tags}}";
 
-      // Get the container where the tags will be displayed
-      var container = document.getElementById("tags-container");
+          // Split the tags by space
+          var tagsArray = tagsString.split(" ");
 
-      // Loop through each tag, create a span, and assign it a class
-      tagsArray.forEach(function (tag) {
-        var tagElement = document.createElement("span");
-        tagElement.className = "tag-box";
-        tagElement.textContent = tag;
-        container.appendChild(tagElement);
-      });
+          // Get the container where the tags will be displayed
+          var container = document.getElementById("tags-container");
 
-      // PATTERNS-OF-USE SEPARATOR //
-      var patternString = "{{Patterns of Use}}";
+          // Loop through each tag, create a span, and assign it a class
+          tagsArray.forEach(function (tag) {
+            var tagElement = document.createElement("span");
+            tagElement.className = "tag-box";
+            tagElement.textContent = tag;
+            container.appendChild(tagElement);
+          });
 
-      var patternArray = patternString.split(",");
+          // PATTERNS-OF-USE SEPARATOR //
+          var patternString = "{{Patterns of Use}}";
 
-      var container = document.getElementById("patterns-container");
+          var patternArray = patternString.split(",");
 
-      patternArray.forEach(function (pattern) {
-        var patternElement = document.createElement("span");
-        patternElement.className = "use-patterns";
-        patternElement.textContent = pattern;
-        container.appendChild(patternElement);
-      });
+          var container = document.getElementById("patterns-container");
 
-      // WORD TYPE SEPARATOR //
-      var wtypeString = "{{Word Type}}";
+          patternArray.forEach(function (pattern) {
+            var patternElement = document.createElement("span");
+            patternElement.className = "use-patterns";
+            patternElement.textContent = pattern;
+            container.appendChild(patternElement);
+          });
 
-      var wtypeArray = wtypeString.split(",");
+          // WORD TYPE SEPARATOR //
+          var wtypeString = "{{Word Type}}";
 
-      var container = document.getElementById("wtype-container");
+          var wtypeArray = wtypeString.split(",");
 
-      wtypeArray.forEach(function (wtype) {
-        var wtypeElement = document.createElement("span");
-        wtypeElement.className = "word-type";
-        wtypeElement.textContent = wtype;
-        container.appendChild(wtypeElement);
-      });
-    </script>
+          var container = document.getElementById("wtype-container");
+
+          wtypeArray.forEach(function (wtype) {
+            var wtypeElement = document.createElement("span");
+            wtypeElement.className = "word-type";
+            wtypeElement.textContent = wtype;
+            container.appendChild(wtypeElement);
+          });
+        </script>
+
+
   </div>
   <br />
 </div>

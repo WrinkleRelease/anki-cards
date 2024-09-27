@@ -1,38 +1,32 @@
+/* JAPANESE KANJI CARD */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
-/* GLOBAL FORMATTING */
+/* Global Formatting */
 :root {
   --color-main-text: #292623;
   --color-hintsBox: #5d554f;
   --color-translations: #83776f;
-  --color-radical: #00aaff;
+  --color-radical: #58BFFC;
   --color-radical-dark: #0093dd;
-  --color-radical-gradient: linear-gradient(
-    to bottom,
-    var(--color-radical),
-    var(--color-radical-dark)
-  );
+  --color-radical-gradient: linear-gradient(to bottom,
+      var(--color-radical),
+      var(--color-radical-dark));
   --color-kanji: #ff00aa;
   --color-kanji-dark: #dd0093;
-  --color-kanji-gradient: linear-gradient(
-    to bottom,
-    var(--color-kanji),
-    var(--color-kanji-dark)
-  );
+  --color-kanji-gradient: linear-gradient(to bottom,
+      var(--color-kanji),
+      var(--color-kanji-dark));
   --color-vocab: #aa00ff;
   --color-vocab-dark: #9300dd;
-  --color-vocab-gradient: linear-gradient(
-    to bottom,
-    var(--color-vocab),
-    var(--color-vocab-dark)
-  );
+  --color-vocab-gradient: linear-gradient(to bottom,
+      var(--color-vocab),
+      var(--color-vocab-dark));
   --color-reading: #555;
   --color-reading-dark: #484848;
-  --color-reading-gradient: linear-gradient(
-    to bottom,
-    var(--color-reading),
-    var(--color-reading-dark)
-  );
+  --color-reading-gradient: linear-gradient(to bottom,
+      var(--color-reading),
+      var(--color-reading-dark));
 }
 
 .card {
@@ -44,14 +38,14 @@
 .front {
   color: #fff;
   background-color: var(--color-kanji);
-	padding: 5px 10px 6px 10px;
-	border-radius: 10px;
+  padding: 5px 10px 6px 10px;
+  border-radius: 10px;
 }
 
 .back {
   color: var(--color-kanji);
   background-color: #fafafa;
-	border-radius: 10px;
+  border-radius: 10px;
 }
 
 .body-content {
@@ -61,7 +55,7 @@
 }
 
 .input-instructions {
-	font-family: "Helvetica", "Arial";
+  font-family: "Helvetica", "Arial";
   text-align: left;
   font-size: .75rem;
 }
@@ -70,38 +64,103 @@
   font-family: "Noto Sans JP", sans-serif;
   font-size: 7rem;
   font-kerning: normal;
-	text-shadow: 2px 2px .5px #dd0093;
+  text-shadow: 2px 2px .5px #dd0093;
 }
 
-.mobile .prompt {
+/* Device Specific Formatting */
+.iphone .prompt {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 6em;
+  text-shadow: 0.5px 1.5px 0px #dd0093;
+}
+
+.ipad .prompt {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 7em;
+  text-shadow: 0.5px 1.5px 0px #dd0093;
+}
+
+.ipad .ipad-format {
+  font-size: 1em;
+}
+
+.ipad .ipad-position {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
+/* .mobile .prompt {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 6rem;
-	text-shadow: 0.5px 1.5px 0px #dd0093;
-}
+  text-shadow: 0.5px 1.5px 0px #dd0093;
+} */
 
-
+/* User Input Formatting */
 .typed-answer {
- font-size: 4rem;
- padding-bottom: 20px;
+  font-size: 4rem;
+  padding-bottom: 20px;
 }
 
-.reading-box {
-  border: dashed 1px;
-	border-color: #2a1b0a;
-	margin: 15px 10px 0px 10px;
-	padding: 20px 0px 0px 0px;
-	background-color: #eee5dc;
-	border-radius: 10px;
+/* Hints Box */
+.hintsBox {
+  margin: 7px 0px 0px 0px;
+  padding: 1px 10px 8px 10px;
+  border-radius: 5px;
+  color: #5d554f;
+  background-color: #E5DAD0;
+  line-height: 1.5em;
 }
 
+.hintsBox p:nth-of-type(2) {
+  margin-top: -8px;
+  margin-bottom: 3px;
+}
+
+.hintsBox .title {
+  font-weight: bold;
+}
+
+/* Divider & Media Button */
+.hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #444444;
+  margin: 0 20px 10px 20px;
+  padding: 0;
+}
+
+input[type=text] {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0px;
+  font-size: 25px;
+}
+
+.replay-button svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 3px;
+}
+
+.replay-button svg circle {
+  fill: transparent;
+}
+
+.replay-button svg path {
+  fill: #444444;
+}
+
+/* Meaning & Reading */
 .notes {
- border: dashed 2px;
- border-collapse: collapse;
- line-height: 1.5rem;
- margin: 20px 10px 10px 10px;
- padding: 0 0 20px 0;
- border-color: #333;
- border-radius: 10px;
+  border: dashed 2px;
+  border-collapse: collapse;
+  line-height: 1.5rem;
+  margin: 20px 10px 10px 10px;
+  padding: 0 0 20px 0;
+  border-color: #333;
+  border-radius: 10px;
 }
 
 .notes-title {
@@ -118,168 +177,124 @@
   color: var(--color-main-text);
 }
 
-/* HINTS BOX */
-
-.hintsBox {
-  margin: 7px 0px 0px 0px;
-  padding: 1px 10px 8px 10px;
-  border-radius: 5px;
-  color: #5d554f;
-	background-color: #E5DAD0;
-	line-height: 1.5em;
-}
-
-.hintsBox p:nth-of-type(2) {
-  margin-top: -8px;
-  margin-bottom: 3px;
-}
-
-.hintsBox .title {
-  font-weight: bold;
-}
-
-.hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #444444;
-    margin: 0 20px 10px 20px;
-    padding: 0;
-}
-
-input[type=text] {
-  width: 100%;
-  text-align: center;
-  padding: 12px 0px;
-  font-size: 25px;
-}
-
-.replay-button svg {
-  width: 15px;
-  height: 15px;
-  stroke-width: 3px; 
-}
-
-.replay-button svg circle {
-  fill: transparent;
-}
-
-.replay-button svg path {
-  fill: #444444;
-}
-
-/* MEANING & READING SECTION */
-
-.meaning-text, .reading {
-  color: var(--color-main-text);
-}
-
-.meaning-text{
-	font-family: "Couier New", monospace;
-	font-weight: bold;
-	font-size: 1em;
-	text-align: center;
-}
-
-.meaning-box {
- border: dashed 1px;
- margin: 10px 10px 10px 10px;
- padding: 10px 0px 10px 0px;
- border-color: #333;
- border-radius: 10px;
+.reading-box {
+  border: dashed 1px;
+  border-color: #2a1b0a;
+  margin: 15px 10px 0px 10px;
+  padding: 20px 0px 0px 0px;
+  background-color: #eee5dc;
+  border-radius: 10px;
 }
 
 .reading {
-	font-family: "Noto Sans";
-	font-size: .8em;
-	text-align: center;
-	padding: 5px 0px 0px 0px;
+  font-family: "Noto Sans";
+  font-size: .8em;
+  text-align: center;
+  padding: 5px 0px 0px 0px;
 }
 
-/* CARD FRONT HINTS */
+.meaning-text,
+.reading {
+  color: var(--color-main-text);
+}
 
+.meaning-text {
+  font-family: "Couier New", monospace;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+
+.meaning-box {
+  border: dashed 1px;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 0px 10px 0px;
+  border-color: #333;
+  border-radius: 10px;
+}
+
+/* Card Front Hint */
 .button {
-	padding: 4px 16px;
+  padding: 4px 16px;
 }
-    
+
 button:after {
-	font-size: 15px;
-	padding: 0px 50px 0px 50px;
-	content: "Show reading hint";
+  font-size: 15px;
+  padding: 0px 50px 0px 50px;
+  content: "Show reading hint";
 }
 
 .r-hint-box {
-	border: dashed 1px;
-	border-radius: 5px;
-	margin: 10px 50px 10px 50px;
-	padding: 0px 15px 0px 15px;
-	border-color: #222;
-	background-color: #777;
+  border: dashed 1px;
+  border-radius: 5px;
+  margin: 10px 50px 10px 50px;
+  padding: 0px 15px 0px 15px;
+  border-color: #222;
+  background-color: #777;
 }
 
 .r-hint-text {
-	font-size: 15px;
-	padding: 10px 0px 10px 0px;
-	color: #fff;
+  font-size: 15px;
+  padding: 10px 0px 10px 0px;
+  color: #fff;
 }
 
 
-/* STROKE ORDER */
-
+/* Kanji Stroke Order  */
 .strokeContainer {
-	margin: 0.0em 0.5em 0.0em 0.5em;
-	padding: 0.0em 0.0em;
-	border-radius: 8px;
-	background-color: #E5DAD0;
+  margin: 0.0em 0.5em 0.0em 0.5em;
+  padding: 0.0em 0.0em;
+  border-radius: 8px;
+  background-color: #E5DAD0;
 }
 
 .strokeImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
-	width: 200px;
+  width: 200px;
 }
 
-/* READINGS TABLE */
-
+/* Readings Table */
 .rdgsTable {
-	color: var(--color-hintsBox);
-	font-size: .8em;
-	background-color: #E5DAD0;
-	border-radius: 6px;
-	text-align: left;
-	border-collapse: collapse;
-	margin-left: 15px;
-	margin-right:15px;
-	padding-top: 5px;
+  color: var(--color-hintsBox);
+  font-size: .8em;
+  background-color: #E5DAD0;
+  border-radius: 6px;
+  text-align: left;
+  border-collapse: collapse;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 5px;
 }
 
 .rdgsTableRow {
-	display: table-row;
+  display: table-row;
 }
 
 .rdgsTableHeading {
-	display: table-header-group;
+  display: table-header-group;
 }
 
-.rdgsTableCell, .rdgsTableHead {
-	border: 0px;
-	display: table-cell;
-	padding: 3px 10px;
+.rdgsTableCell,
+.rdgsTableHead {
+  border: 0px;
+  display: table-cell;
+  padding: 3px 10px;
 }
 
-.rdgsLeft {	
-	border: 0px;
+.rdgsLeft {
+  border: 0px;
   padding: 3px 20px;
 }
 
 .rdgsTableHeading {
-	display: table-header-group;
-	font-weight: bold;
+  display: table-header-group;
+  font-weight: bold;
 }
 
 .rdgsTableBody {
-	display: table-row-group;
+  display: table-row-group;
 }
 
 .oRdng-box {
@@ -291,7 +306,7 @@ button:after {
   border-color: #d7c7ba;
   padding: 3px 3px 1px 3px;
   margin-right: 2px;
-	margin-bottom: 2px;
+  margin-bottom: 2px;
   display: inline-flex;
 }
 
@@ -300,7 +315,7 @@ button:after {
 }
 
 .kRdng-box {
-	font-kerning: normal;
+  font-kerning: normal;
   font-size: 0.9em;
   border: solid 1px brown;
   border-radius: 5px;
@@ -308,7 +323,7 @@ button:after {
   border-color: #d7c7ba;
   padding: 3px 3px 1px 3px;
   margin-right: 2px;
-	margin-bottom: 2px;
+  margin-bottom: 2px;
   display: inline-flex;
 }
 
@@ -316,11 +331,10 @@ button:after {
   margin-bottom: 5px;
 }
 
-/* TAG CONTAINER */
-
+/* Tag Container */
 .tag-box {
- 	font-family: Monospace;
-	color: var(--color-main-text);
+  font-family: Monospace;
+  color: var(--color-main-text);
   background-color: #f9f9f9;
   border-radius: 4px;
   border: 1px solid;
@@ -334,11 +348,10 @@ button:after {
 }
 
 #tags-container {
-	margin: 6px;
+  margin: 6px;
 }
 
-/* COLOR FORMATS */
-
+/* Color Highlights */
 .no-break {
   white-space: nowrap;
   white-space-collapse: collapse;
@@ -377,5 +390,5 @@ mark.rdng {
 }
 
 #comp-contents mark {
-  margin: 0px 2px 0px 0px; 
+  margin: 0px 2px 0px 0px;
 }

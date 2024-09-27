@@ -1,116 +1,118 @@
-<div class="back">
+<!-- JAPANESE KANJI CARD -->
+
+<div class="back ipad-position">
     <div class="prompt">{{Kanji}}</div>
-    
+
     <div class="typed-answer">
-    {{type:Reading}}
+        {{type:Reading}}
     </div>
-    
-    <div class="meaning-box">
+
+    <div class="meaning-box ipad-format">
         <div class="meaning-text">
-        {{Meaning}}</div>
+            {{Meaning}}</div>
         <div class="reading">
-        {{Reading}}
+            {{Reading}}
         </div>
     </div>
-    
+
     <div class="reading-box">
-    <div class="strokeContainer">
+        <div class="strokeContainer">
             <div class="strokeImage">
                 {{Stroke Order}}
             </div>
-    </div>
-    
-    <div class="notes">
-    <div class="notes-title">Meaning Notes</div>
-    <div class="hr"></div>
-    
-    <div class="notes-text">
-    
-    <div class="hintsBox">
-      <p class="title">Components</p>
-      <p><span id="comp-contents">{{Components}}</span></p>
-    </div>
-    
-    {{Meaning Notes}}
-    </div>
-    
-    <div class="notes-title">Reading Notes</div>
-    <div class="hr"></div>
-    
-    <!-- READINGS TABLE -->
-    <div class="rdgsTable">
-    <div class="rdgsTableHeading">
-    <div class="rdgsTableRow">
-    <div class="rdgsTableHead">Kun'yomi</div>
-    <div class="rdgsLeft">On'yomi</div>
-    </div>
-    </div>
-    <div class="rdgsTableBody">
-    <div class="rdgsTableRow">
-    <div id="kRdng-container" class="rdgsTableCell"></div>
-    <div id="oRdng-container" class="rdgsLeft"></div>
-    </div>
-    </div>
-    </div>
-    
-    <div class="notes-text">
-    {{Reading Notes}}
-    </div>
-    </div>
-    
-    <!-- FOOTNOTE -->
-    <div id="tags-container"></div>
-    
-    <script>
-        // Assuming the {{Tags}} field contains tags separated by spaces
-        var tagsString = "{{Tags}}";
-        
-        // Split the tags by space
-        var tagsArray = tagsString.split(" ");
-    
-        // Get the container where the tags will be displayed
-        var container = document.getElementById("tags-container");
-    
-        // Loop through each tag, create a span, and assign it a class
-        tagsArray.forEach(function(tag) {
-            var tagElement = document.createElement("span");
-            tagElement.className = "tag-box";
-            tagElement.textContent = tag;
-            container.appendChild(tagElement);
-        });
-    
-    
-     // ON'YOMI READINGS SEPARATOR //
-        var oRdngString = "{{On'yomi Reading}}";
-        
-        var oRdngArray = oRdngString.split("、");
-    
-        var container = document.getElementById("oRdng-container");
-    
-        oRdngArray.forEach(function(oRdng) {
-            var oRdngElement = document.createElement("span");
-            oRdngElement.className = "oRdng-box";
-            oRdngElement.textContent = oRdng;
-            container.appendChild(oRdngElement);
-        });
-    
-     // KUN'YOMI READINGS SEPARATOR //
-        var kRdngString = "{{Kun'yomi Reading}}";
-        
-        var kRdngArray = kRdngString.split("、");
-    
-        var container = document.getElementById("kRdng-container");
-    
-        kRdngArray.forEach(function(kRdng) {
-            var kRdngElement = document.createElement("span");
-            kRdngElement.className = "kRdng-box";
-            kRdngElement.textContent = kRdng;
-            container.appendChild(kRdngElement);
-        });
-    </script>
-    <!-- END FOOTNOTE -->
-    
+        </div>
+
+        <div class="notes">
+            <div class="notes-title">Meaning Notes</div>
+            <div class="hr"></div>
+
+            <div class="notes-text ipad-format">
+
+                <div class="hintsBox">
+                    <p class="title">Components</p>
+                    <p><span id="comp-contents">{{Components}}</span></p>
+                </div>
+
+                {{Meaning Notes}}
+            </div>
+
+            <div class="notes-title">Reading Notes</div>
+            <div class="hr"></div>
+
+            <!-- READINGS TABLE -->
+            <div class="rdgsTable">
+                <div class="rdgsTableHeading">
+                    <div class="rdgsTableRow">
+                        <div class="rdgsTableHead">Kun'yomi</div>
+                        <div class="rdgsLeft">On'yomi</div>
+                    </div>
+                </div>
+                <div class="rdgsTableBody">
+                    <div class="rdgsTableRow">
+                        <div id="kRdng-container" class="rdgsTableCell"></div>
+                        <div id="oRdng-container" class="rdgsLeft"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notes-text ipad-format">
+                {{Reading Notes}}
+            </div>
+        </div>
+
+        <!-- FOOTNOTE -->
+        <div id="tags-container"></div>
+
+        <script>
+            // Assuming the {{Tags}} field contains tags separated by spaces
+            var tagsString = "{{Tags}}";
+
+            // Split the tags by space
+            var tagsArray = tagsString.split(" ");
+
+            // Get the container where the tags will be displayed
+            var container = document.getElementById("tags-container");
+
+            // Loop through each tag, create a span, and assign it a class
+            tagsArray.forEach(function (tag) {
+                var tagElement = document.createElement("span");
+                tagElement.className = "tag-box";
+                tagElement.textContent = tag;
+                container.appendChild(tagElement);
+            });
+
+
+            // ON'YOMI READINGS SEPARATOR //
+            var oRdngString = "{{On'yomi Reading}}";
+
+            var oRdngArray = oRdngString.split("、");
+
+            var container = document.getElementById("oRdng-container");
+
+            oRdngArray.forEach(function (oRdng) {
+                var oRdngElement = document.createElement("span");
+                oRdngElement.className = "oRdng-box";
+                oRdngElement.textContent = oRdng;
+                container.appendChild(oRdngElement);
+            });
+
+            // KUN'YOMI READINGS SEPARATOR //
+            var kRdngString = "{{Kun'yomi Reading}}";
+
+            var kRdngArray = kRdngString.split("、");
+
+            var container = document.getElementById("kRdng-container");
+
+            kRdngArray.forEach(function (kRdng) {
+                var kRdngElement = document.createElement("span");
+                kRdngElement.className = "kRdng-box";
+                kRdngElement.textContent = kRdng;
+                container.appendChild(kRdngElement);
+            });
+        </script>
+        <!-- END FOOTNOTE -->
+
     </div>
     <br>
-    </div>
-    </div>
+</div>
+</div>

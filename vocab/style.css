@@ -1,38 +1,33 @@
+/* JAPANESE VOCAB CARD */
+
+/* Pull In Noto Sans JP */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
-/* GLOBAL FORMATTING */
+/* Global Formatting */
 :root {
   --color-main-text: #292623;
   --color-hintsBox: #5d554f;
   --color-translations: #83776f;
-  --color-radical: #00aaff;
+  --color-radical: #58BFFC;
   --color-radical-dark: #0093dd;
-  --color-radical-gradient: linear-gradient(
-    to bottom,
-    var(--color-radical),
-    var(--color-radical-dark)
-  );
+  --color-radical-gradient: linear-gradient(to bottom,
+      var(--color-radical),
+      var(--color-radical-dark));
   --color-kanji: #ff00aa;
   --color-kanji-dark: #dd0093;
-  --color-kanji-gradient: linear-gradient(
-    to bottom,
-    var(--color-kanji),
-    var(--color-kanji-dark)
-  );
+  --color-kanji-gradient: linear-gradient(to bottom,
+      var(--color-kanji),
+      var(--color-kanji-dark));
   --color-vocab: #aa00ff;
   --color-vocab-dark: #9300dd;
-  --color-vocab-gradient: linear-gradient(
-    to bottom,
-    var(--color-vocab),
-    var(--color-vocab-dark)
-  );
+  --color-vocab-gradient: linear-gradient(to bottom,
+      var(--color-vocab),
+      var(--color-vocab-dark));
   --color-reading: #555;
   --color-reading-dark: #484848;
-  --color-reading-gradient: linear-gradient(
-    to bottom,
-    var(--color-reading),
-    var(--color-reading-dark)
-  );
+  --color-reading-gradient: linear-gradient(to bottom,
+      var(--color-reading),
+      var(--color-reading-dark));
 }
 
 a {
@@ -46,6 +41,7 @@ a {
   text-align: center;
 }
 
+/* Main Content */
 .body-content {
   margin-top: 15px;
   line-height: 1.55em;
@@ -79,7 +75,7 @@ input[type="text"] {
 }
 
 .input-instructions {
-  font-family: "DM sans", "Hiragino Sans", "Helvetica", "Arial";
+  font-family: "Helvetica", "Arial";
   text-align: left;
   font-size: 1rem;
 }
@@ -91,12 +87,37 @@ input[type="text"] {
   text-shadow: 2px 2px 0.5px #9300dd;
 }
 
-.mobile .prompt {
+/* Device Specific Formatting */
+.iphone .prompt {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 4rem;
+  font-size: 6em;
   text-shadow: 0.5px 1.5px 0px #9300dd;
 }
 
+.ipad .prompt {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 8em;
+  text-shadow: 0.5px 1.5px 0px #9300dd;
+}
+
+.ipad .ipad-format {
+  font-size: 1.05em;
+  ling-height: 2em;
+}
+
+.ipad .ipad-position {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
+/* .mobile .prompt {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 6rem;
+	text-shadow: 0.5px 1.5px 0px #9300dd;
+} */
+
+/* Divider and Media Buttons */
 .hr {
   display: block;
   height: 1px;
@@ -120,9 +141,9 @@ input[type="text"] {
   fill: #444444;
 }
 
-/* MEANING & READING */
-
-.meaning-text, .reading {
+/* Meaning & Reading */
+.meaning-text,
+.reading {
   color: var(--color-main-text);
 }
 
@@ -157,17 +178,16 @@ input[type="text"] {
   padding: 5px 0px 0px 0px;
 }
 
-/* READINGS TABLE FORMATTING */
-
+/* Reading Table Formatting */
 tr td:first-child {
   padding-left: 0px;
 }
+
 td {
   padding: 0px 60px 0px 0px;
 }
 
-/* NOTES SECTION */
-
+/* Notes Section */
 .notes {
   border: dashed 2px;
   border-radius: 10px;
@@ -191,9 +211,9 @@ td {
   color: #54514e;
 }
 
-/* HINTS BOX */
-/* hintsBox is also called from a few Note fields using HTML */
+/* Hints Box */
 
+/* hintsBox is also called from a few Note fields using HTML */
 .hintsBox {
   margin: 7px 0px 5px 0px;
   padding: 1px 10px 8px 10px;
@@ -218,7 +238,7 @@ td {
   text-align: left;
   border-color: #d7c7ba;
   padding: 3px 3px 1px 3px;
-  margin-right: 2px;
+  margin-right: 3px;
   margin-bottom: 2px;
   display: inline-flex;
 }
@@ -241,10 +261,11 @@ td {
   border-color: #d7c7ba;
   padding: 5px;
   padding-bottom: 5px;
-  margin-right: 5px;
+  margin-right: 3px;
+  maring-bottom: 2px;
 }
 
-/* FRONT READING HINTS */
+/* Front Reading Hints */
 
 .button {
   padding: 4px 16px;
@@ -257,12 +278,12 @@ button:after {
 }
 
 .r-hint-box {
-	border: dashed 1px;
-	border-radius: 5px;
-	margin: 10px 50px 10px 50px;
-	padding: 0px 15px 0px 15px;
-	border-color: #222;
-	background-color: #777;
+  border: dashed 1px;
+  border-radius: 5px;
+  margin: 10px 50px 10px 50px;
+  padding: 0px 15px 0px 15px;
+  border-color: #222;
+  background-color: #777;
 }
 
 .r-hint-text {
@@ -271,8 +292,7 @@ button:after {
   color: #fff;
 }
 
-/* TAG CONTAINER */
-
+/* Tag Containers */
 .tag-box {
   font-family: Monospace;
   color: var(--color-main-text);
@@ -292,8 +312,7 @@ button:after {
   margin: 6px;
 }
 
-/* COLOR HIGHLIGHTS */
-
+/* Color Highlights */
 .no-break {
   white-space: nowrap;
   white-space-collapse: collapse;
@@ -335,7 +354,7 @@ mark.rdng {
   margin: 0px 2px 0px 0px;
 }
 
-/* CONTEXT SENTENCES */
+/* Context Sentences */
 
 #context-sentences {
   display: none;
