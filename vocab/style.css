@@ -9,7 +9,8 @@
 :root {
   --color-main-text: #292623;
   --color-hintsBox: #5d554f;
-  --color-translations: #83776f;
+  --color-titles: #83776f;
+  --color-translations: #c4b5ab;
   --color-radical: #58BFFC;
   --color-radical-dark: #0093dd;
   --color-radical-gradient: linear-gradient(to bottom,
@@ -273,7 +274,7 @@ td {
 
 .rdng-container {
   margin-top: -10px;
-  margin-bottom: 3px;
+	margin-bottom: 3px;
 }
 
 #rdng-box {
@@ -392,7 +393,7 @@ mark.rdng {
 
 #comp-container {
   margin-top: -5px;
-  margin-bottom: 5px;
+  margin-bottom: 5px;  
 }
 
 .comp-box {
@@ -403,9 +404,9 @@ mark.rdng {
   display: inline;
 }
 
-/* Context Sentences */
+/* Context Sentences with JS */
 
-#context-sentences {
+/* #context-sentences {
   display: none;
 }
 
@@ -416,4 +417,18 @@ mark.rdng {
 
 .translation {
   color: var(--color-translations);
+} */
+
+/* Context Sentences w/o JS*/
+/* to be used till JS implentation in Anki is consistent */
+
+ *[class^='sen'] { 
+  font-family: "Noto Serif JP";
+  display: block;
+  margin-top: 1em;
 }
+
+*[class^='tran'] {
+  display: block;
+  color: var(--color-translations);
+} 
