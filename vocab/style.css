@@ -419,8 +419,8 @@ mark.rdng {
   color: var(--color-translations);
 } */
 
-/* Context Sentences w/o JS*/
-/* to be used till JS implentation in Anki is consistent */
+/* Context Sentences w/o JS */
+/* to be used until JS behavior is consistent in Anki */
 
  *[class^='sen'] { 
   font-family: "Noto Serif JP";
@@ -431,4 +431,9 @@ mark.rdng {
 *[class^='tran'] {
   display: block;
   color: var(--color-translations);
+	margin-bottom: 1.5em;
 } 
+
+*[class^='tran']:last-child {
+  margin-bottom: -1em;
+}
