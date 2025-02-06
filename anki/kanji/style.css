@@ -91,7 +91,7 @@
 .ipad .ipad-position {
   margin-left: auto;
   margin-right: auto;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 /* .mobile .prompt {
@@ -401,7 +401,11 @@ mark.rdng {
 
 #comp-container {
   margin-top: -5px;
+<<<<<<< HEAD
   margin-bottom: 5px;
+=======
+  margin-bottom: 5px;  
+>>>>>>> fffa2d5 (re-org of file structure. inclusion of kanji_table.csv with kanji information from various sources)
 }
 
 .comp-box {

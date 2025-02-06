@@ -99,7 +99,11 @@ input[type="text"] {
 
 .ipad .prompt {
   font-family: "Noto Sans JP", sans-serif;
+<<<<<<< HEAD
   font-size: 5em;
+=======
+  font-size: 4em;
+>>>>>>> fffa2d5 (re-org of file structure. inclusion of kanji_table.csv with kanji information from various sources)
   text-shadow: 0.5px 2px 0px #9300dd;
 }
 
@@ -111,7 +115,7 @@ input[type="text"] {
 .ipad .ipad-position {
   margin-left: auto;
   margin-right: auto;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 /* .mobile .prompt {
@@ -430,10 +434,20 @@ mark.rdng {
 
 *[class^='tran'] {
   display: block;
+<<<<<<< HEAD
   color: var(--color-translations);
 	margin-bottom: 1.5em;
 } 
 
 *[class^='tran']:last-child {
   margin-bottom: -1em;
+=======
+  font-size: 0.7em;
+  color: var(--color-translations);
+  margin-bottom: 1.0em;
+} 
+
+*[class^='tran']:last-child {
+  margin-bottom: -1.0em;
+>>>>>>> fffa2d5 (re-org of file structure. inclusion of kanji_table.csv with kanji information from various sources)
 }

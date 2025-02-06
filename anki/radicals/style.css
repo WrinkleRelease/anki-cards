@@ -1,7 +1,10 @@
 /* JAPANESE RADICALS CARD */
 
-/* Pull In Noto Sans JP */
+/* Pull In Noto Sans JP, Sans */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* Global Formatting */
+
 
 /* Global Formatting */
 :root {
@@ -31,7 +34,7 @@
 }
 
 .card {
-  font-family: "Helvetica", "Arial";
+  font-family: "Noto Sans", "Helvetica", "Arial"; 
   font-size: 20px;
   text-align: center;
 }
@@ -82,12 +85,10 @@
   text-shadow: 0.5px 1.5px 0px #0093DD;
 }
 
-
 .typed-answer {
   font-size: 4rem;
   padding-bottom: 20px;
 }
-
 
 .memory-hint {
   padding: 20px 0 5px 20px;
@@ -103,28 +104,11 @@
   color: #000;
 }
 
-
 input[type=text] {
   width: 100%;
   text-align: center;
   padding: 12px 0px;
   font-size: 25px;
-}
-
-.replay-button svg {
-  width: 40px;
-  height: 40px;
-  stroke: transparent;
-  stroke-width: 0px;
-  margin-top: 20px;
-}
-
-.replay-button svg circle {
-  fill: #FC779A;
-}
-
-.replay-button svg path {
-  fill: #fff;
 }
 
 .hint {
