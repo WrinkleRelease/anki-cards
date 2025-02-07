@@ -15,10 +15,11 @@ An external JavaScript file named `_script.js` is called from the `collection.me
 This river is the Amazon River.
 </details>
 
-**NOTE (1/1/25):** Due to inconsistent JS behavior in Anki, the above functionality has been temporarily deprecated in favor of a simplified HTML/CSS-only solution. While the solution above is preferable, Anki, for whatever reason, only runs the script on the first card reviewed in a batch. Any subsequent cards have their context sentences completely missing.
+> [!IMPORTANT] (1/1/25)
+> Due to inconsistent JS behavior in Anki, the above  functionality has been temporarily deprecated in favor of a simplified HTML/CSS-only solution (shown in the screenshot below). While the solution above is preferable, Anki, for whatever reason, only runs the script on the first card reviewed in a batch. Any subsequent cards have their context sentences completely missing. 
 
 ## JavaScript
-A few JavaScript code blocks embedded in the HTML allow for several fields in my cards to be pulled in as strings, separated, then formatted and displayed back onto the card in tidy little boxes.
+A few JavaScript code blocks embedded in in `back.html` allow for several fields in my cards to be pulled in as strings, separated, then formatted and displayed back onto the card in tidy little boxes. These include the `tags`, `components`, `word type`, `reading` and `patterns of use`.
 
 ## Card Fields
 The Vocab note-type contains the following fields
@@ -31,7 +32,7 @@ The Vocab note-type contains the following fields
 - Reading Type
 - Reading Notes
 - Patterns of Use
-- Context
+- Context Sentences
 - Reading Hint
 
 ## Screenshots
