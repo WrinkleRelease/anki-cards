@@ -15,7 +15,7 @@ An external JavaScript file named `_script.js` is called from the `collection.me
 This river is the Amazon River.
 </details>
 
-> [!IMPORTANT] (1/1/25)
+> [!IMPORTANT]
 > Due to inconsistent JS behavior in Anki, the above  functionality has been temporarily deprecated in favor of a simplified HTML/CSS-only solution (shown in the screenshot below). While the solution above is preferable, Anki, for whatever reason, only runs the script on the first card reviewed in a batch. Any subsequent cards have their context sentences completely missing. 
 
 ## JavaScript
@@ -35,6 +35,5 @@ The Vocab note-type contains the following fields
 - Context Sentences
 - Reading Hint
 
-## Screenshots
-![Vocab Card Back](https://github.com/user-attachments/assets/f7871c81-ea5a-46e5-856f-977cb4dcb2b9)
-
+## Screenshot
+![vocab_back](https://github.com/user-attachments/assets/c2d16eec-651f-4a89-9214-e6d8caa83eb7)
