@@ -99,11 +99,7 @@ input[type="text"] {
 
 .ipad .prompt {
   font-family: "Noto Sans JP", sans-serif;
-<<<<<<< HEAD
   font-size: 5em;
-=======
-  font-size: 4em;
->>>>>>> fffa2d5 (re-org of file structure. inclusion of kanji_table.csv with kanji information from various sources)
   text-shadow: 0.5px 2px 0px #9300dd;
 }
 
@@ -224,7 +220,6 @@ td {
 }
 
 /* Hints Box */
-
 /* hintsBox is also called from a few Note fields using HTML */
 .hintsBox {
   margin: 7px 0px 5px 0px;
