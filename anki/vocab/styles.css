@@ -8,50 +8,191 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    * {
+        transition: 0.4s;
+    }
+
     .prompt {
-        font-size: 3em;
+        font-size: 3.5em;
+        margin-top: -15px;
     }
 
     .meaning {
         font-size: 1.0em;
     }
+
+    .meaning-container,
+    .reading-container,
+    .context-container {
+        width: 500px;
+    }
+
+    .section-1a,
+    .section-2a,
+    .section-3a {
+        padding: 20px 25px 10px 25px;
+    }
+
+    .section-1b,
+    .section-2b,
+    .section-3b {
+        padding: 15px 25px 35px 25px;
+    }
+
+    .reading-type,
+    .patterns-title {
+        font-size: 0.9em;
+    }
+
+    .use-patterns {
+        display: inline-block;
+        margin: 0px 5px 5px 0px;
+    }
+
+    .patterns-title {
+        align-self: center;
+    }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    * {
+        transition: 0.4s;
+    }
+
     .prompt {
         font-size: 4em;
+        margin-top: -15px;
     }
 
     .meaning {
         font-size: 1.0em;
     }
+
+    .meaning-container,
+    .reading-container,
+    .context-container {
+        width: 500px;
+    }
+
+    .section-1a,
+    .section-2a,
+    .section-3a {
+        padding: 20px 30px 10px 30px;
+    }
+
+    .section-1b,
+    .section-2b,
+    .section-3b {
+        padding: 15px 25px 35px 25px;
+    }
+
+    .patterns-title {
+        align-self: center;
+    }
+
+    .use-patterns {
+        display: inline-block;
+        margin: 0px 5px 5px 0px;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    * {
+        transition: 0.4s;
+    }
+
     .prompt {
         font-size: 6em;
+        margin-top: -25px;
     }
 
     .meaning {
         font-size: 1.3em;
     }
+
+    .meaning-container,
+    .reading-container,
+    .context-container {
+        width: 600px;
+    }
+
+    .section-1a,
+    .section-2a,
+    .section-3a {
+        padding: 20px 30px 10px 30px;
+    }
+
+    .section-1b,
+    .section-2b,
+    .section-3b {
+        padding: 15px 25px 35px 25px;
+    }
+
+    .patterns-title {
+        align-self: center;
+    }
+
+    .use-patterns {
+        display: inline-block;
+        margin: 0px 5px 0px 0px;
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    * {
+        transition: 0.4s;
+    }
+
     .prompt {
         font-size: 6em;
+        margin-top: -25px;
     }
 
     .meaning {
         font-size: 1.3em;
     }
+
+    .meaning-container,
+    .reading-container,
+    .context-container {
+        width: 700px;
+    }
+
+    .section-1a,
+    .section-2a,
+    .section-3a {
+        padding: 20px 30px 10px 30px;
+    }
+
+    .section-1b,
+    .section-2b,
+    .section-3b {
+        padding: 15px 25px 35px 25px;
+    }
+
+    .patterns-title {
+        align-self: center;
+    }
+
+    .use-patterns {
+        display: inline-block;
+        margin: 0px 5px 0px 0px;
+    }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    * {
+        transition: 0.4s;
+    }
+
     .prompt {
         font-size: 6em;
     }
@@ -59,7 +200,30 @@
     .meaning {
         font-size: 1.3em;
     }
+
+    .meaning-container,
+    .reading-container,
+    .context-container {
+        width: 700px;
+    }
+
+    .section-1a,
+    .section-2a,
+    .section-3a {
+        padding: 20px 30px 10px 30px;
+    }
+
+    .patterns-title {
+        align-self: center;
+    }
+
+    .use-patterns {
+        display: inline-block;
+        margin: 0px 5px 0px 0px;
+    }
+
 }
+
 
 
 
@@ -207,7 +371,6 @@ input[type="text"] {
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(2px);
-    padding: 20px 40px 10px 40px;
 }
 
 .section-1b,
@@ -221,7 +384,6 @@ input[type="text"] {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     border-right: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0px 40px 10px 40px;
 }
 
 /* Meaning Section */
@@ -266,8 +428,6 @@ input[type="text"] {
     color: var(--color-vocab);
     font-weight: 500;
     place-self: start;
-    margin-bottom: -10px;
-    margin-top: -20px;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -321,17 +481,17 @@ input[type="text"] {
     font-family: "Noto Sans", sans-serif;
     color: #3d3d3d;
     font-weight: 800;
-    padding: 10px 0px 20px 0px;
+    padding: 15px 0px 20px 0px;
     background-color: rgba(255, 255, 255, 0.0);
-    border-radius: 0px;
+    border-bottom: 1px dashed #4d4d4d;
 }
 
 .meaning-notes {
     grid-area: meaning-notes;
     font-size: 0.9em;
     color: #3d3d3d;
-    border-top: 1px dashed #4d4d4d;
-    padding: 20px 0px 40px 0px;
+    margin-top: 20px;
+
 }
 
 /* Reading Section */
@@ -382,7 +542,6 @@ input[type="text"] {
     font-size: 0.9em;
     color: #3d3d3d;
     margin-top: 10px;
-    padding: 5px 20px 40px 20px;
 }
 
 /* Context Section */
@@ -400,7 +559,6 @@ input[type="text"] {
     grid-template-areas:
         "patterns-title section-name"
         "use-patterns  section-name";
-    padding: 20px 20px 10px 20px;
     margin-top: 20px;
     grid-area: section-3a;
 }
@@ -415,7 +573,6 @@ input[type="text"] {
 
 .use-patterns {
     grid-area: use-patterns;
-    display: inline-block;
     font-family: "Noto Serif JP", sans-serif;
     font-size: 0.9em;
     background-color: rgba(218, 191, 231, 0);
@@ -423,14 +580,12 @@ input[type="text"] {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
     border-radius: 7px;
     padding: 2px 5px 2px 5px;
-    margin: 0px 5px 5px 0px;
 }
 
 .section-3b {
     display: flex;
     overflow: auto;
     margin-bottom: 1.0em;
-    padding: 5px 20px 50px 20px;
     grid-area: section-3b;
     /* 	color: var(--translations-text); */
 }
@@ -456,7 +611,7 @@ input[type="text"] {
 }
 
 *[class^="tran"]:last-child {
-    margin-bottom: -1em;
+    margin-bottom: -0.5em;
 }
 
 /* Tag Containers */
