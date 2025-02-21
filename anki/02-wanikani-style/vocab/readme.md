@@ -34,6 +34,3 @@ The Vocab note-type contains the following fields
 - Patterns of Use
 - Context Sentences
 - Reading Hint
-
-## Screenshot
-![vocab_back](https://github.com/user-attachments/assets/c2d16eec-651f-4a89-9214-e6d8caa83eb7)

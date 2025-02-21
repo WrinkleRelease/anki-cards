@@ -1,0 +1,207 @@
+/* Anki - Radicals Card - Glass Panes - r1.1 */
+
+
+/* Pull in fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Breakpoints */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .prompt {
+        font-size: 6em;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .prompt {
+        font-size: 6em;
+    }
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .prompt {
+        font-size: 7em;
+    }
+
+}
+
+/* Global Styling */
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+.card {
+    text-align: center;
+    font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+}
+
+/* Color Variables */
+:root {
+    --color-translations: rgba(255, 255, 255, 0.75);
+    --color-main-text: #1d1d1d;
+    --color-radical: #58bffc;
+    --color-radical-dark: #0093dd;
+    --color-radical-gradient: linear-gradient(to bottom,
+            var(--color-radical),
+            var(--color-radical-dark));
+    --color-kanji: #ff00aa;
+    --color-kanji-dark: #dd0093;
+    --color-kanji-gradient: linear-gradient(to bottom,
+            var(--color-kanji),
+            var(--color-kanji-dark));
+    --color-vocab: #9735c9;
+    --color-vocab-dark: #9300dd;
+    --color-vocab-gradient: linear-gradient(to bottom,
+            var(--color-vocab),
+            var(--color-vocab-dark));
+    --color-reading: #555;
+    --color-reading-dark: #484848;
+    --color-reading-gradient: linear-gradient(to bottom,
+            var(--color-reading),
+            var(--color-reading-dark));
+    --type-shadow-1: 0px 0px 3px rgba(18, 15, 15, 0.2),
+        1px 1px 4px rgba(215, 215, 215, 0.2);
+}
+
+/* Color Highlights */
+.no-break {
+    white-space: nowrap;
+    white-space-collapse: collapse;
+    text-wrap: nowrap;
+}
+
+mark {
+    color: #ffffff;
+    font-size: inherit;
+    border-radius: 4px;
+    display: inline-block;
+    line-height: 0.95em;
+    padding: 3px 3px 4px 3px;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
+    white-space: nowrap;
+    text-wrap: nowrap;
+}
+
+mark.kanji {
+    font-family: "Noto Sans JP";
+    background: var(--color-kanji-gradient);
+}
+
+mark.radical {
+    background: var(--color-radical-gradient);
+}
+
+mark.vocab {
+    background: var(--color-vocab-gradient);
+}
+
+mark.rdng {
+    background: var(--color-reading-gradient);
+}
+
+/* Front Body */
+.front {
+    background-image: url("_bg-radical.png");
+    background-size: 4%;
+    background-repeat: repeat;
+    border-radius: 20px;
+    color: #fafafa;
+    padding: 25px 20px 25px 20px;
+    border-radius: 30px;
+}
+
+input[type="text"] {
+    width: 100%;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    padding: 12px 0px;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+.typed-answer {
+    font-family: "Fira Mono", monospace;
+    font-weight: "300";
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+.input-instructions {
+    font-family: "Noto Sans", "Arial";
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Back Body */
+.back {
+    background-color: #fafafa;
+    border-radius: 40px 40px 40px 40px;
+    color: var(--color-radical);
+    padding: 20px 0px 20px 0px;
+}
+
+.back-container {
+    display: grid;
+    grid-template-areas:
+        "section-1a"
+        "section-1b";
+    width: 600px;
+    border-radius: 40px;
+    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(88, 191, 252, 0.2);
+    margin: 0 auto;
+
+}
+
+.section-1a {
+    display: grid;
+    grid-template-rows: repeat(2, fr);
+    grid-template-areas:
+        "prompt"
+        "typed-answer";
+    grid-auto-flow: row;
+    grid-area: section-1a;
+}
+
+.section-1b {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "memory-hint"
+        "mnemonic-text";
+    grid-auto-flow: row;
+    border-radius: 0px 0px 40px 40px;
+    background-color: rgba(0, 147, 221, 5%);
+    background-repeat: repeat;
+    grid-area: section-1b;
+}
+
+.memory-hint {
+    text-align: left;
+    padding: 10px 20px 0px 20px;
+    grid-area: memory-hint;
+}
+
+.mnemonic-text {
+    font-size: 1em;
+    padding: 0px 20px 20px 20px;
+    text-align: left;
+    color: var(--color-main-text);
+    grid-area: mnemonic-text;
+}

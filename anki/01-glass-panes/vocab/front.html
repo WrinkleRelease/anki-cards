@@ -1,0 +1,24 @@
+<!-- Anki - Vocab Card - Glass Panes - r1.1 -->
+
+<div class="front">
+
+    <div class="prompt">
+        {{Vocabulary}}
+    </div>
+
+    {{type:Reading}}
+
+
+    <button type="button"
+        onclick="document.getElementById('r-hint').style.display = 'block'; this.style.display = 'none';">
+    </button>
+
+
+    <div id="r-hint" style="display: none;">
+        <div class="r-hint-box">
+            <div class="r-hint-text">
+                {{Reading Hint}}
+            </div>
+        </div>
+    </div>
+</div>
