@@ -15,7 +15,7 @@ A few JavaScript code blocks embedded in `back.html` allow for several fields[^2
 [^2]:`tags`, `components`, `word type`, and `patterns of use` fields.
 
 ## Background Images
-This card calls, and tiles, small background images. Dropped them in your /collections.media folder and they should sync fine with mobile versions of Anki.
+This card calls, and tiles, a small background `.jpg`. Drop it in your /collections.media folder and it should sync fine with mobile versions of Anki.
 
 ## Card Fields
 The Vocab `Note Type` contains the following fields
