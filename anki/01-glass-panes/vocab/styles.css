@@ -1,4 +1,5 @@
 /* Anki - Vocab Card - Glass Panes - r1.1 */
+/* github.com/WrinkleRelease */
 
 
 /* Pull in fonts */
@@ -102,8 +103,8 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .prompt {
-        font-size: 6em;
-        margin-top: -25px;
+        font-size: 4.1em;
+        margin-top: -15px;
     }
 
     .meaning {
@@ -145,50 +146,8 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .prompt {
-        font-size: 6em;
-        margin-top: -25px;
-    }
-
-    .meaning {
-        font-size: 1.3em;
-    }
-
-    .meaning-container,
-    .reading-container,
-    .context-container {
-        width: 700px;
-    }
-
-    .section-1a,
-    .section-2a {
-        padding: 15px 1.7em 10px 1.7em;
-    }
-
-    .section-3a {
-        padding: 15px 1.7em 5px 1.7em;
-    }
-
-    .section-1b,
-    .section-2b,
-    .section-3b {
-        padding: 0px 1.7em 1.7em 1.7em;
-    }
-
-    .patterns-title {
-        align-self: center;
-    }
-
-    .use-patterns {
-        display: inline-block;
-        margin: 0px 5px 0px 0px;
-    }
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .prompt {
-        font-size: 6em;
+        font-size: 4.1em;
+        margin-top: -15px;
     }
 
     .meaning {
@@ -307,9 +266,6 @@ mark.rdng {
 
 /* Front Body */
 .front {
-    background-image: url("_bg-vocab.png");
-    background-size: 10%;
-    background-repeat: repeat;
     background-color: var(--color-vocab);
     border-radius: 20px;
     color: #fafafa;
@@ -342,8 +298,8 @@ input[type="text"] {
 
 /* Back Body */
 .back {
-    background-image: url("_bg-bluenoise-01.jpg");
-    background-size: 20%;
+    background-image: url("_bg-bluepaper01.jpg");
+    background-size: 30%;
     background-color: #a2b8bc;
     border-radius: 20px;
     color: #4d4d4d;
@@ -450,7 +406,7 @@ input[type="text"] {
     font-size: 0.65em;
     background-color: #a2b8bc;
     border-radius: 15px;
-		padding: 3px 10px 3px 10px;
+		padding: 0px 10px 3px 10px;
    margin-right: 3px;
 }
 
@@ -615,7 +571,7 @@ input[type="text"] {
 }
 
 *[class^="tran"] {
-    font-weight: 200;
+    font-weight: 300;
     display: block;
     font-size: 0.75em;
     color: var(--color-translations);
