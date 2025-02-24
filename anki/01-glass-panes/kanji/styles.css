@@ -1,190 +1,12 @@
 /* Anki - Kanji Card - Glass Panes - r1.1 */
 /* github.com/WrinkleRelease */
 
-
-/* Pull in fonts */
+/** # MARK: Pull In Fonts 
+*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
-
-/* Breakpoints */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .prompt {
-        font-size: 2.5em;
-        margin-top: 0px;
-    }
-
-    .meaning {
-        font-size: 1.0em;
-    }
-
-    .meaning-container,
-    .reading-container,
-    .context-container {
-        max-width: 600px;
-    }
-
-    .section-1a,
-    .section-2a {
-        padding: 15px 1.5em 10px 1.5em;
-    }
-
-    .section-3a {
-        padding: 15px 1.5em 5px 1.5em;
-    }
-
-    .section-1b,
-    .section-2b,
-    .section-3b {
-        padding: 0px 1.5em 1.7em 1.5em;
-    }
-
-    .reading-type,
-    .patterns-title {
-        font-size: 0.9em;
-    }
-
-    .use-patterns {
-        display: inline-block;
-        margin: 0px 5px 5px 0px;
-    }
-
-    .patterns-title {
-        align-self: center;
-    }
-
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .prompt {
-        font-size: 4em;
-        margin-top: -15px;
-    }
-
-    .meaning {
-        font-size: 1.0em;
-    }
-
-    .meaning-container,
-    .reading-container,
-    .context-container {
-        width: 600px;
-    }
-
-    .section-1a,
-    .section-2a {
-        padding: 15px 1.7em 10px 1.7em;
-    }
-
-    .section-3a {
-        padding: 15px 1.7em 5px 1.7em;
-    }
-
-    .section-1b,
-    .section-2b,
-    .section-3b {
-        padding: 0px 1.7em 1.7em 1.7em;
-    }
-
-    .patterns-title {
-        align-self: center;
-    }
-
-    .use-patterns {
-        display: inline-block;
-        margin: 0px 5px 5px 0px;
-    }
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .prompt {
-        font-size: 4.1em;
-        margin-top: -15px;
-    }
-
-    .meaning {
-        font-size: 1.2em;
-    }
-
-    .meaning-container,
-    .reading-container,
-    .context-container {
-        max-width: 600px;
-    }
-
-    .section-1a,
-    .section-2a {
-        padding: 15px 1.7em 10px 1.7em;
-    }
-
-    .section-3a {
-        padding: 15px 1.7em 5px 1.7em;
-    }
-
-    .section-1b,
-    .section-2b,
-    .section-3b {
-        padding: 0px 1.7em 1.7em 1.7em;
-    }
-
-    .patterns-title {
-        align-self: center;
-    }
-
-    .use-patterns {
-        display: inline-block;
-        margin: 0px 5px 0px 0px;
-    }
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .prompt {
-        font-size: 4.1em;
-        margin-top: -15px;
-    }
-
-    .meaning {
-        font-size: 1.3em;
-    }
-
-    .meaning-container,
-    .reading-container,
-    .context-container {
-        width: 700px;
-    }
-
-    .section-1a,
-    .section-2a {
-        padding: 15px 1.7em 10px 1.7em;
-    }
-
-    .section-3a {
-        padding: 15px 1.7em 5px 1.7em;
-    }
-
-    .section-1b,
-    .section-2b,
-    .section-3b {
-        padding: 0px 1.7em 1.7em 1.7em;
-    }
-
-    .patterns-title {
-        align-self: center;
-    }
-
-    .use-patterns {
-        display: inline-block;
-        margin: 0px 5px 0px 0px;
-    }
-
-}
 
 *,
 :after,
@@ -192,7 +14,14 @@
     box-sizing: border-box;
 }
 
-/* Color Variables */
+.card {
+    text-align: center;
+    font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+}
+
+/** MARK: Color Variables
+*/
 :root {
     --color-translations: rgba(255, 255, 255, 0.75);
     --color-main-text: #1d1d1d;
@@ -220,13 +49,8 @@
         1px 1px 4px rgba(215, 215, 215, 0.2);
 }
 
-.card {
-    text-align: center;
-    font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
-}
-
-/* Color Highlights */
+/** MARK: Color Highlighting
+*/
 .no-break {
     white-space: nowrap;
     white-space-collapse: collapse;
@@ -264,8 +88,8 @@ mark.rdng {
     background: var(--color-reading-gradient);
 }
 
-
-/* Front */
+/** MARK: Front
+*/
 .front {
     background-color: var(--color-kanji);
     border-radius: 20px;
@@ -297,7 +121,8 @@ input[type="text"] {
     font-size: 1rem;
 }
 
-/* Back */
+/** MARK: Back
+*/
 .back {
     background-image: url("_bg-bluepaper01.jpg");
     background-size: 30%;
@@ -307,15 +132,299 @@ input[type="text"] {
     padding: 0px 0px 30px 0px;
 }
 
-.body-content, .hintsBox {
-		line-height: 1.5em;
+.meaning-container, .stroke-order, .reading-container {
+  margin: 0 auto;
+  text-align: left;
+  box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
 }
 
+.section-1a,
+.section-2a {
+    border-radius: 40px 40px 0px 0px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+
+.body-content,
 .hintsBox {
-    
+    line-height: 1.5em;
 }
 
-/* Tag Containers */
+.hintsBox {}
+
+.section-name {
+    grid-area: section-name;
+    display: start;
+    place-self: start;
+    font-family: "Fira Mono";
+    font-size: 0.7em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
+    writing-mode: vertical-lr;
+    padding: 10px 10px 10px 10px; 
+}
+
+.white-column {
+overflow: hidden;
+    grid-area: white-column;
+   background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+
+/** MARK: Meaning Section
+*/
+.meaning-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "section-1a"
+        "section-1b";	
+}
+
+.section-1a {
+    display: grid;
+    grid-template-columns: repeat(2, auto) 30px;
+    grid-template-rows: repeat(3, auto);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "sub-container sub-container section-name"
+        "prompt prompt section-name"
+        "components components section-name";
+    grid-area: section-1a;
+}
+
+.sub-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "reading"
+        "meaning";
+    grid-area: sub-container;
+}
+
+.meaning {
+    grid-area: meaning;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    color: #3d3d3d;
+    font-weight: 800;
+    padding: 15px 0px 20px 0px;
+    background-color: rgba(255, 255, 255, 0.0);
+    border-bottom: 1px dashed #4d4d4d;
+}
+
+.reading {
+    grid-area: reading;
+}
+
+.prompt {
+    grid-area: prompt;
+}
+
+.components {
+    grid-area: components;
+  font-weight: 400;
+    font-size: 0.8em;
+    color: #2d2d2d;
+    background-color: rgba(218, 191, 231, 0);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    justify-self: start;
+    align-self: center;
+    border-radius: 10px;
+    padding: 8px 10px 8px 10px;
+}
+
+.components mark {
+		margin-right: 3px;
+}
+
+.components mark:not(:first-child) {
+		margin-left: 2px;
+}
+
+.section-1b {
+    overflow: hidden;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 80px;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "meaning-notes white-column";
+    border-radius: 0px 0px 40px 40px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    grid-area: section-1b;
+}
+
+.meaning-notes {
+   overflow: hidden;
+    grid-area: meaning-notes;
+		background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    font-size: 0.9em;
+    color: #3d3d3d;
+}
+
+
+/** MARK: Stroke Order
+*/
+.stroke-order {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "stroke-order-img white-column";
+    margin: 0 auto;
+    border-radius: 40px 40px 0px 0px;
+    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+.stroke-order-img {
+    grid-area: stroke-order-img;
+   justify-self: center;
+  width: 200px;
+
+}
+
+/** MARK: Reading Section
+*/
+.reading-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "section-2a"
+        "section-2b";
+}
+
+.section-2a {
+    display: grid;
+    grid-template-columns: repeat(2, auto) 30px;
+    grid-template-rows: repeat(3, auto);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "rdgs-table rdgs-table section-name"
+        "rdgs-table rdgs-table section-name"
+        "rdgs-table rdgs-table section-name";
+    grid-area: section-2a;
+}
+
+.section-2b {
+    overflow: hidden;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 80px;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "reading-notes white-column";
+    border-radius: 0px 0px 40px 40px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    grid-area: section-2b;
+}
+
+.reading-notes {
+    grid-area: reading-notes;
+    font-size: 0.9em;
+    color: #3d3d3d;
+    margin-top: 10px;
+}
+
+.rdgs-table {
+    display: table-row-group;
+    color: var(--color-hintsBox);
+    font-size: .8em;
+    border-radius: 6px;
+    text-align: left;
+    border-collapse: collapse;
+    grid-area: rdgs-table;
+}
+
+.rdgs-theader {
+    display: table-header-group;
+    grid-area: rdgs-table-head;
+    font-weight: bold;
+}
+
+.rdgs-tbody {
+    display: table-row;
+}
+
+.rdgs-tbody-left,
+.rdgs-tbody-right {
+    border: 0px;
+    display: table-cell;
+    padding: 3px 10px;
+}
+
+#on-rdng-container {
+    margin-bottom: 5px;
+}
+
+#kun-rdng-container {
+    margin-bottom: 5px;
+}
+
+.on-rdng-box {
+    font-family: "Noto Serif JP";
+    font-kerning: normal;
+    font-size: 1.0em;
+    border: solid 1px brown;
+    border-radius: 5px;
+    text-align: left;
+    border-color: #d1beaf;
+    padding: 3px 3px 1px 3px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    display: inline-flex;
+}
+
+.kun-rdng-box {
+    font-family: "Noto Serif JP";
+    font-kerning: normal;
+    font-size: 1.0em;
+    border: solid 1px brown;
+    border-radius: 5px;
+    text-align: left;
+    border-color: #d1beaf;
+    padding: 3px 3px 1px 3px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    display: inline-flex;
+}
+
+
+/** MARK: Tag Containers
+*/
 .tag-box {
     display: inline-block;
     font-family: "Fira Mono", monospace;
@@ -334,7 +443,8 @@ input[type="text"] {
     margin: 0px 20px 0px 20px;
 }
 
-/* Front Reading Hints */
+/** MARK: Front Reading Hints
+*/
 .button {
     padding: 4px 16px;
     margin-bottom: 10px;

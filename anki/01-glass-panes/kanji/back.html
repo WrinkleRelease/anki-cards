@@ -9,25 +9,44 @@
     <!-- Meaning Section -->
     <div class="meaning-container">
         <div class="section-1a">
-            <div class="prompt">{{Prompt}}</div>
-            <div class="components">{{Components}}</div>
-            <div class="stroke-order">{{Stroke Order}}</div>
             <div class="section-name">meaning</div>
+            <div class="sub-container">
+                <div class="meaning">{{Meaning}}</div>
+                <div class="reading">{{Reading}}</div>
+            </div>
+            <div class="prompt">{{Kanji}}</div>
+            <div class="components">{{Components}}</div>
         </div>
         <div class="section-1b">
-            <div class="meaning">{{Meaning}}</div>
+            <div class="white-column"></div>
             <div class="meaning-notes">{{Meaning Notes}}</div>
         </div>
     </div>
 
+
+    <!-- Stroke Order -->
+    <div class="stroke-order">
+        <div class="white-column"></div>
+        <div class="stroke-order-img">{{Stroke Order}}</div>
+      </div>
+
     <!-- Reading Section -->
     <div class="reading-container">
         <div class="section-2a">
-            <div class="reading">{{Reading}}</div>
-
             <div class="section-name">reading</div>
+            <div class="rdgs-table">
+                <div class="rdgs-theader">
+                    <div class="rdgs-theader-left">On'yomi</div>
+                    <div class="rdgs-theader-right">Kun'yomi</div>
+                </div>
+                <div class="rdgs-tbody">
+                    <div class="rdgs-tbody-left">{{On'yomi Reading}}</div>
+                    <div class="rdgs-tbody-right">{{Kun'yomi Reading}}</div>
+                </div>
+            </div>
         </div>
         <div class="section-2b">
+            <div class="white-column"></div>
             <div class="reading-notes">{{Reading Notes}}</div>
         </div>
     </div>
@@ -62,11 +81,11 @@
 
     var oRdngArray = oRdngString.split("、");
 
-    var container = document.getElementById("oRdng-container");
+    var container = document.getElementById("on-rdng-container");
 
     oRdngArray.forEach(function (oRdng) {
         var oRdngElement = document.createElement("span");
-        oRdngElement.className = "oRdng-box";
+        oRdngElement.className = "on-rdng-box";
         oRdngElement.textContent = oRdng;
         container.appendChild(oRdngElement);
     });
@@ -76,11 +95,11 @@
 
     var kRdngArray = kRdngString.split("、");
 
-    var container = document.getElementById("kRdng-container");
+    var container = document.getElementById("kun-rdng-container");
 
     kRdngArray.forEach(function (kRdng) {
         var kRdngElement = document.createElement("span");
-        kRdngElement.className = "kRdng-box";
+        kRdngElement.className = "kun-rdng-box";
         kRdngElement.textContent = kRdng;
         container.appendChild(kRdngElement);
     });
