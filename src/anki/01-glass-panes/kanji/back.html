@@ -6,7 +6,8 @@
 
     <div class="typed-answer">{{type:Reading}}</div>
 
-    <!-- Meaning Section -->
+    <!-- MARK: Meaning Section 
+     -->
     <div class="meaning-container">
         <div class="section-1a">
             <div class="section-name">meaning</div>
@@ -22,18 +23,19 @@
         </div>
     </div>
 
-
-    <!-- Stroke Order -->
+    <!-- MARK: Stroke Order 
+     -->
     <div class="stroke-order-container">
         <div class="section-2a">
-			<div class="section-name">stroke order</div>
-		</div>
+            <div class="section-name">stroke order</div>
+        </div>
         <div class="section-2b">
-        <div class="stroke-order-img">{{Stroke Order}}</div>
+            <div class="stroke-order-img">{{Stroke Order}}</div>
         </div>
     </div>
 
-    <!-- Reading Section -->
+    <!-- MARK: Reading Section 
+     -->
     <div class="reading-container">
         <div class="section-3a">
             <div class="section-name">reading</div>
@@ -58,7 +60,9 @@
 
 </div>
 
-<!-- JavaScript -->
+
+<!-- MARK: Javascript
+     -->
 <script>
 
     // -- TAG SEPARATOR -- //
@@ -78,32 +82,25 @@
         container.appendChild(tagElement);
     });
 
-    // ON'YOMI READINGS SEPARATOR //
-    var oRdngString = "{{On'yomi Reading}}";
+    // -- READINGS SEPARATOR -- //
+    function createReadingElements(readingString, containerId, className) {
+        var readingsArray = readingString.split("、");
+        var container = document.getElementById(containerId);
 
-    var oRdngArray = oRdngString.split("、");
+        readingsArray.forEach(function (reading) {
+            var readingElement = document.createElement("span");
+            readingElement.className = className;
+            readingElement.textContent = reading;
+            container.appendChild(readingElement);
+        });
+    }
 
-    var container = document.getElementById("on-rdng-container");
+    // Process On'yomi Readings
+    var onYomiReadingString = "{{On'yomi Reading}}";
+    createReadingElements(onYomiReadingString, "on-rdng-container", "on-rdng-box");
 
-    oRdngArray.forEach(function (oRdng) {
-        var oRdngElement = document.createElement("span");
-        oRdngElement.className = "on-rdng-box";
-        oRdngElement.textContent = oRdng;
-        container.appendChild(oRdngElement);
-    });
-
-    // KUN'YOMI READINGS SEPARATOR //
-    var kRdngString = "{{Kun'yomi Reading}}";
-
-    var kRdngArray = kRdngString.split("、");
-
-    var container = document.getElementById("kun-rdng-container");
-
-    kRdngArray.forEach(function (kRdng) {
-        var kRdngElement = document.createElement("span");
-        kRdngElement.className = "kun-rdng-box";
-        kRdngElement.textContent = kRdng;
-        container.appendChild(kRdngElement);
-    });
+    // Process Kun'yomi Readings
+    var kunYomiReadingString = "{{Kun'yomi Reading}}";
+    createReadingElements(kunYomiReadingString, "kun-rdng-container", "kun-rdng-box");
 
 </script>

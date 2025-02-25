@@ -188,20 +188,17 @@ input[type="text"] {
 .meaning-container,
 .stroke-order-container,
 .reading-container {
-    margin: 0 auto;
     grid-auto-flow: row;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
     gap: 0px 0px;
     text-align: left;
-    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
 }
 
 .section-1a,
 .section-2a,
 .section-3a {
-    border-radius: 40px 40px 0px 0px;
+    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(255, 255, 255, 0.3);
@@ -209,14 +206,34 @@ input[type="text"] {
     backdrop-filter: blur(2px);
 }
 
+.section-1b,
+.section-2b,
+.section-3b {
+    grid-auto-flow: row;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 .body-content,
 .hintsBox {
     line-height: 1.5em;
 }
 
-.hintsBox {
-    border: 1px solid #4d4d4d;
+.hints-box {
+		font-family: "Fira Mono", monospace;
+    font-size: 0.8em;
+    border-radius: 15px;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
+		padding: ;
+}
+
+.hints-box .title {
+    font-weight: bold;
 }
 
 .section-name {
@@ -330,9 +347,6 @@ input[type="text"] {
     grid-auto-flow: row;
     grid-template-areas:
         "meaning-notes";
-    border-radius: 0px 0px 40px 40px;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     grid-area: section-1b;
 }
 
@@ -356,17 +370,12 @@ input[type="text"] {
         "section-2a"
         "section-2b";
     margin: 0 auto;
-    border-radius: 40px 40px 0px 0px;
-    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(2px);
+    margin-bottom: 20px;
 }
 
 .section-2a {
     display: grid;
-    grid-template-columns: 1fr 30p;
+    grid-template-columns: auto 30px;
     grid-template-rows: auto;
     grid-template-areas:
         ". section-name";
@@ -375,11 +384,23 @@ input[type="text"] {
     grid-area: section-2a;
 }
 
+.section-2b {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "stroke-order-img";
+    gap: 0 0px;
+    grid-auto-flow: row;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    grid-area: section-2b;
+}
+
 .stroke-order-img {
     grid-area: stroke-order-img;
-    justify-self: center;
     width: 200px;
-
 }
 
 /** MARK: Reading Section
@@ -393,6 +414,7 @@ input[type="text"] {
     grid-template-areas:
         "section-3a"
         "section-3b";
+    margin-bottom: 1em;
 }
 
 .section-3a {
@@ -409,7 +431,6 @@ input[type="text"] {
 }
 
 .section-3b {
-    overflow: hidden;
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: auto;
@@ -418,9 +439,6 @@ input[type="text"] {
     grid-auto-flow: row;
     grid-template-areas:
         "reading-notes";
-    border-radius: 0px 0px 40px 40px;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     grid-area: section-3b;
 }
 
@@ -428,7 +446,6 @@ input[type="text"] {
     grid-area: reading-notes;
     font-size: 0.9em;
     color: #3d3d3d;
-    margin-top: 10px;
 }
 
 .rdgs-table {

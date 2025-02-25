@@ -2,11 +2,13 @@
 /* github.com/WrinkleRelease */
 
 
-/* Pull in fonts */
+/** MARK: Fonts
+*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Breakpoints */
+/** MARK: Breakpoints
+*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .prompt {
@@ -28,7 +30,8 @@
     }
 }
 
-/* Global Styling */
+/** MARK: Global Styles
+*/
 *,
 :after,
 :before {
@@ -41,7 +44,8 @@
     font-size: 20px;
 }
 
-/* Color Variables */
+/** MARK: Color Variables
+*/
 :root {
     --color-translations: rgba(255, 255, 255, 0.75);
     --color-main-text: #1d1d1d;
@@ -69,7 +73,8 @@
         1px 1px 4px rgba(215, 215, 215, 0.2);
 }
 
-/* Color Highlights */
+/** MARK: Color Highlights
+*/
 .no-break {
     white-space: nowrap;
     white-space-collapse: collapse;
@@ -107,7 +112,8 @@ mark.rdng {
     background: var(--color-reading-gradient);
 }
 
-/* Front Body */
+/** MARK: Front
+*/
 .front {
     color: #fafafa;
     background-color: #fafafa;
@@ -156,7 +162,8 @@ input[type="text"] {
     font-size: 1rem;
 }
 
-/* Back Body */
+/** MARK: Back
+*/
 .back {
     background-color: #fafafa;
     border-radius: 40px;

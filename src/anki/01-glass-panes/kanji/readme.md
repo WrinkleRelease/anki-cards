@@ -8,7 +8,7 @@ The `front` contains an input field that asks for the `Reading` of the words, no
 The `front` also contains a clickable field with a hint.
 
 ## JavaScript
-A few JavaScript code blocks embedded in `back.html` allow for several fields[^2] in my cards to be pulled in as strings, separated, then formatted and displayed back onto the card in tidy little boxes. 
+A few JavaScript code blocks embedded in `back.html` allow for several fields[^2] in my cards to be pulled in as strings, separated, then formatted and displayed back onto the card in tidy little boxes.
 [^2]:`tags`, `components`, `onyomi-reading`, and `kunyomi-reading` fields.
 
 ## Background Images
