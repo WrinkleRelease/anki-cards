@@ -307,7 +307,7 @@ input[type="text"] {
 }
 
 .body-content, .hintsBox {
-		line-height: 1.5em;
+	line-height: 1.5em;
 }
 
 .meaning-container,
@@ -357,7 +357,7 @@ input[type="text"] {
 
 .section-1a {
     display: grid;
-    grid-template-columns: auto auto 30px;
+    grid-template-columns: repeat(2, auto) 30px;
     grid-template-rows: repeat(3, auto);
     gap: 10px;
     grid-auto-flow: row;
