@@ -1,109 +1,112 @@
 <!-- Anki - Vocab Card - Glass Panes - r1.1 -->
-<!-- github.com/WrinkleRelease -->
 
 <!-- <script src="_script.js"></script> -->
 
-	<div class="back">
+<div class="back">
 
-		<!-- MARK: Meaning Section 
-		 -->
-		<div class="typed-answer">{{type:Reading}}</div>
+	<!-- Meaning Section -->
 
-		<div class="meaning-container">
-			<div class="section-1a">
-				<div class="section-name">meaning</div>
-				<div class="prompt">{{Vocabulary}}</div>
-				<div id="wtype-container"></div>
-				<div class="components">{{Components}}</div>
-			</div>
-		
+	<div class="typed-answer">{{type:Reading}}</div>
 
-			<div class="section-1b">
-				<div class="meaning">{{Meaning}}</div>
-				<div class="meaning-notes">{{Meaning Notes}}</div>
-			</div>
+	<div class="meaning-container">
+		<div class="section-1a">
+			<div class="section-name">meaning</div>
+			<div class="prompt">{{Vocabulary}}</div>
+			<div id="wtype-container"></div>
+			<div class="components">{{Components}}</div>
 		</div>
+	
 
-
-		<!-- MARK: Reading Section 
-		 -->
-		<div class="reading-container">
-			<div class="section-2a">
-				<div class="section-name">reading</div>
-				<div class="reading-type">{{Reading Type}}</div>
-				<div class="reading">{{Reading}}</div>
-			</div>
-
-			<div class="section-2b">
-				<div class="reading-notes">{{Reading Notes}}</div>
-			</div>
+		<div class="section-1b">
+			<div class="meaning">{{Meaning}}</div>
+			<div class="meaning-notes">{{Meaning Notes}}</div>
 		</div>
-
-		<!-- MARK: Context Section 
-		 -->
-		<div class="context-container">
-			<div class="section-3a">
-				<div class="section-name">context</div>
-				<div class="patterns-title">Patterns of Use</div>
-				<div id="patterns-container"></div>
-			</div>
-
-			<div class="section-3b">
-				<div class="context-sentences">{{Context}}</div>
-			</div>
-		</div>
-
-		<!-- Tags -->
-
-		<div id="tags-container"></div>
-
 	</div>
 
+	<!-- End Meaning Section -->
 
-<!-- MARK: JavaScript 
- -->
+	<!-- Reading Section -->
+
+	<div class="reading-container">
+		<div class="section-2a">
+			<div class="section-name">reading</div>
+			<div class="reading-type">{{Reading Type}}</div>
+			<div class="reading">{{Reading}}</div>
+		</div>
+
+		<div class="section-2b">
+			<div class="reading-notes">{{Reading Notes}}</div>
+		</div>
+	</div>
+
+	<!-- End Reading Section -->
+
+	<!-- Context Section -->
+
+	<div class="context-container">
+		<div class="section-3a">
+			<div class="section-name">context</div>
+			<div class="patterns-title">Patterns of Use</div>
+			<div id="patterns-container"></div>
+		</div>
+
+		<div class="section-3b">
+			<div class="context-sentences">{{Context}}</div>
+		</div>
+	</div>
+
+	<!-- End Context Section -->
+
+	<!-- TAGS -->
+
+	<div id="tags-container"></div>
+
+</div>
+
+
+<!-- JavaScript -->
 <script>
 
-	// -- TAG SEPARATOR -- //
-	var tagsString = "{{Tags}}";
+// -- TAG SEPARATOR -- //
+var tagsString = "{{Tags}}";
 
-	// Split the tags by space
-	var tagsArray = tagsString.split(" ");
+// Split the tags by space
+var tagsArray = tagsString.split(" ");
 
-	// Get the container where the tags will be displayed
-	var container = document.getElementById("tags-container");
+// Get the container where the tags will be displayed
+var container = document.getElementById("tags-container");
 
-	// Loop through each tag, create a span, and assign it a class
-	tagsArray.forEach(function (tag) {
-		var tagElement = document.createElement("span");
-		tagElement.className = "tag-box";
-		tagElement.textContent = tag;
-		container.appendChild(tagElement);
-	});
+// Loop through each tag, create a span, and assign it a class
+tagsArray.forEach(function (tag) {
+	var tagElement = document.createElement("span");
+	tagElement.className = "tag-box";
+	tagElement.textContent = tag;
+	container.appendChild(tagElement);
+});
 
-	// -- PATTERNS-OF-USE SEPARATOR -- //
-	var patternString = "{{Patterns of Use}}";
-	var patternArray = patternString.split(",");
+// -- PATTERNS-OF-USE SEPARATOR -- //
+var patternString = "{{Patterns of Use}}";
+var patternArray = patternString.split(",");
 
-	var container = document.getElementById("patterns-container");
+var container = document.getElementById("patterns-container");
 
-	patternArray.forEach(function (pattern) {
-		var patternElement = document.createElement("span");
-		patternElement.className = "use-patterns";
-		patternElement.textContent = pattern;
-		container.appendChild(patternElement);
-	});
+patternArray.forEach(function (pattern) {
+	var patternElement = document.createElement("span");
+	patternElement.className = "use-patterns";
+	patternElement.textContent = pattern;
+	container.appendChild(patternElement);
+});
 
-	// -- WORD TYPE SEPARATOR -- //
-	var wtypeString = "{{Word Type}}";
-	var wtypeArray = wtypeString.split(",");
-	var container = document.getElementById("wtype-container");
+// -- WORD TYPE SEPARATOR -- //
+var wtypeString = "{{Word Type}}";
+var wtypeArray = wtypeString.split(",");
+var container = document.getElementById("wtype-container");
 
-	wtypeArray.forEach(function (wtype) {
-		var wtypeElement = document.createElement("span");
-		wtypeElement.className = "word-type";
-		wtypeElement.textContent = wtype;
-		container.appendChild(wtypeElement);
-	});
+wtypeArray.forEach(function (wtype) {
+	var wtypeElement = document.createElement("span");
+	wtypeElement.className = "word-type";
+	wtypeElement.textContent = wtype;
+	container.appendChild(wtypeElement);
+});
 
 </script>

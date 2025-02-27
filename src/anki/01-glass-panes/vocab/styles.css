@@ -3,7 +3,7 @@
 
 
 /** MARK: Fonts
-*/
+/*
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
@@ -194,7 +194,7 @@
     box-sizing: border-box;
 }
 
-/** MARK:  Color Variables 
+/** MARK: Color Variables 
 */
 :root {
     --color-translations: rgba(255, 255, 255, 0.75);
@@ -229,7 +229,7 @@
     font-size: 20px;
 }
 
-/** MARK: Color Highlights 
+/** MARK:  Color Highlights 
 */
 .no-break {
     white-space: nowrap;
@@ -276,6 +276,7 @@ mark.rdng {
     color: #fafafa;
     padding: 5px 10px 6px 10px;
     border-radius: 30px;
+    min-height: 300px;
 }
 
 input[type="text"] {
@@ -289,7 +290,7 @@ input[type="text"] {
 }
 
 .typed-answer {
-    font-family: "Fira Mono", monospace;
+    font-family: "Courier New", monospace;
     font-weight: "300";
     font-size: 1.5rem;
     padding-bottom: 20px;
@@ -312,8 +313,9 @@ input[type="text"] {
     padding: 0px 0px 30px 0px;
 }
 
-.body-content, .hints-box {
-	line-height: 1.5em;
+.body-content,
+.hintsBox {
+    line-height: 1.5em;
 }
 
 .meaning-container,
@@ -354,7 +356,7 @@ input[type="text"] {
     border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/** MARK: Meaning Section 
+/** MARK: Meaning Section
 */
 .meaning-container {
     grid-template-areas:
@@ -364,7 +366,7 @@ input[type="text"] {
 
 .section-1a {
     display: grid;
-    grid-template-columns: repeat(2, auto) 30px;
+    grid-template-columns: auto auto 30px;
     grid-template-rows: repeat(3, auto);
     gap: 10px;
     grid-auto-flow: row;
@@ -380,6 +382,7 @@ input[type="text"] {
     display: flex;
     place-self: start;
     font-family: "Fira Mono";
+    font-weight: normal;
     font-size: 0.7em;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
@@ -405,19 +408,19 @@ input[type="text"] {
 .word-type {
     grid-area: word-type;
     display: inline-block;
-		justify-self: center;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 0.65em;
-    background-color: #a2b8bc;
+    justify-self: center;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: normal;
+    color: #fff;
+    font-size: 0.7em;
+    background-color: #bdb8a6;
     border-radius: 15px;
-		padding: 0px 10px 3px 10px;
-   margin-right: 3px;
+    padding: 0px 10px 3px 10px;
+    margin-right: 3px;
 }
 
 .components {
- grid-area: components;
+    grid-area: components;
     font-weight: 400;
     font-size: 0.8em;
     color: #2d2d2d;
@@ -431,11 +434,11 @@ input[type="text"] {
 }
 
 .components mark {
-		margin-right: 3px;
+    margin-right: 3px;
 }
 
 .components mark:not(:first-child) {
-		margin-left: 2px;
+    margin-left: 2px;
 }
 
 .section-1b {
@@ -469,7 +472,7 @@ input[type="text"] {
 
 }
 
-/** MARK: Reading Section 
+/** MARK: Reading Section
 */
 .reading-container {
     grid-template-areas:
@@ -520,7 +523,7 @@ input[type="text"] {
     margin-top: 10px;
 }
 
-/** MARK: Context Section 
+/** MARK: Context Section
 */
 .context-container {
     grid-template-areas:
@@ -567,6 +570,7 @@ input[type="text"] {
 }
 
 
+/** MARK: Context Sentences
 /* Context Sentences w/o JS */
 /* to be used until JS behavior is consistent in Anki */
 
@@ -590,18 +594,18 @@ input[type="text"] {
     margin-bottom: -0.2em;
 }
 
-/** MARK: Tag Containers 
+/** MARK: Tag Containers
 */
 .tag-box {
     display: inline-block;
-    font-family: "Fira Mono", monospace;
+    font-family: "Fira Mono";
     color: var(--color-main-text);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.15);
     box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
-    font-size: 0.6em;
+    font-size: 0.65em;
     padding: 5px 15px 5px 15px;
     margin: 0px 5px 0px 0px;
 }
@@ -610,8 +614,7 @@ input[type="text"] {
     margin: 0px 20px 0px 20px;
 }
 
-/** MARK: Front Reading Hints 
-*/
+/* Front Reading Hints */
 .button {
     padding: 4px 16px;
     margin-bottom: 10px;
