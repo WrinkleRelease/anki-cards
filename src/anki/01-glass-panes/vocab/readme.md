@@ -28,5 +28,5 @@ The Vocab `Note Type` contains the following fields
 - Reading Type
 - Reading Notes
 - Patterns of Use
-- Context Sentences
+- Context
 - Reading Hint
