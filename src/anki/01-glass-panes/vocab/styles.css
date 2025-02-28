@@ -7,7 +7,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
 
 /** MARK: Breakpoints 
 */
@@ -313,11 +314,24 @@ input[type="text"] {
     padding: 0px 0px 30px 0px;
 }
 
-.body-content,
-.hintsBox {
+.body-content {
     line-height: 1.5em;
+    padding-bottom: 20px;
 }
 
+.hints-box {
+    line-height: 1.5em;
+    font-family: "Fira Code", monospace;
+    font-size: 0.8em;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
+    padding: 0px 20px 15px 20px;
+}
+
+.hints-box .title {
+    font-weight: bold;
+}
 .meaning-container,
 .reading-container,
 .context-container {
@@ -381,9 +395,8 @@ input[type="text"] {
     grid-area: section-name;
     display: flex;
     place-self: start;
-    font-family: "Fira Mono";
-    font-weight: normal;
-    font-size: 0.7em;
+    font-family: "Fira Code", monospace;
+    font-size: 0.6em;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
     box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
@@ -598,15 +611,15 @@ input[type="text"] {
 */
 .tag-box {
     display: inline-block;
-    font-family: "Fira Mono";
+    font-family: "Fira Code", monospace;
     color: var(--color-main-text);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.15);
     box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
-    font-size: 0.65em;
-    padding: 5px 15px 5px 15px;
+    font-size: 0.6em;
+    padding: 5px 10px 5px 10px;
     margin: 0px 5px 0px 0px;
 }
 
