@@ -14,14 +14,12 @@
 @media only screen and (max-width: 600px) {
     .prompt {
         font-size: 4em;
-        margin-top: -15px;
     }
 
     .meaning-container,
-    .stroke-order-container,
-    .reading-container {
-        width: 95%;
-
+    .reading-container,
+    .context-container {
+        width: 90%;
     }
 
     .meaning {
@@ -47,11 +45,16 @@
 @media only screen and (min-width: 600px) {
     .prompt {
         font-size: 5em;
-        margin-top: -15px;
     }
 
     .meaning {
         font-size: 1.2em;
+    }
+
+    .meaning-container,
+    .reading-container,
+    .context-container {
+        width: 90%;
     }
 
     .section-1a,
@@ -78,6 +81,8 @@
     text-align: center;
     font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 /** MARK: Color Variables
@@ -250,8 +255,8 @@ input[type="text"] {
 
 .section-name {
     grid-area: section-name;
-    display: start;
-    place-self: start;
+    justify-self: right;
+    align-self: start;
     font-family: "Fira Code";
     font-size: 0.6em;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -273,26 +278,34 @@ input[type="text"] {
 
 .section-1a {
     display: grid;
-    grid-template-columns: 5em auto 30px;
+    grid-template-columns: 5em auto auto;
     grid-template-rows: repeat(2, auto);
     gap: 10px;
     grid-auto-flow: row;
     grid-template-areas:
-        "prompt sub-container section-name"
-        "components components section-name";
+        "sub-container sub-container section-name"
+        "sub-container sub-container stroke-order-img";
     grid-area: section-1a;
+}
+
+.stroke-order-img {
+    display: absolute;
+    margin-right: -10px;
+    justify-self: right;
+    align-self: end;
+    grid-area: stroke-order-img;
+    width: 90px;
 }
 
 .sub-container {
     display: grid;
-
-    grid-template-columns: auto;
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     grid-auto-flow: row;
     grid-template-areas:
-        "meaning"
-        "reading";
-    padding: 10px 0px 10px 0px;
+        "prompt meaning"
+        "prompt reading"
+        "components components";
     grid-area: sub-container;
 }
 
@@ -320,6 +333,7 @@ input[type="text"] {
     color: var(--color-kanji);
     font-weight: 500;
     place-self: start;
+    margin-top: -25px;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -367,48 +381,6 @@ input[type="text"] {
     color: #3d3d3d;
 }
 
-
-/** MARK: Stroke Order
-*/
-.stroke-order-container {
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "section-2a"
-        "section-2b";
-    margin-bottom: 20px;
-}
-
-.section-2a {
-    gap: 0 0px;
-}
-
-.section-2b {
-    display: flex;
-    justify-content: center;
-    border-radius: 40px;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    padding-top: 15px;
-}
-
-.stroke-order-img {
-    justify-self: center;
-    grid-area: stroke-order-img;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
-    width: 200px;
-
-}
-
 /** MARK: Reading Section
 */
 .reading-container {
@@ -425,7 +397,7 @@ input[type="text"] {
 
 .section-3a {
     display: grid;
-    grid-template-columns: repeat(2, auto) 30px;
+    grid-template-columns: repeat(2, auto) 1fr;
     grid-template-rows: repeat(3, auto);
     gap: 0px 0px;
     grid-auto-flow: row;

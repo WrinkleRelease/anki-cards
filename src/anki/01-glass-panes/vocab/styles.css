@@ -4,10 +4,12 @@
 
 /** MARK: Fonts
 /*
+
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
 
 
 /** MARK: Breakpoints 
@@ -26,7 +28,7 @@
     .meaning-container,
     .reading-container,
     .context-container {
-        max-width: 600px;
+        width: 90%;
     }
 
     .section-1a,
@@ -41,7 +43,7 @@
     .section-1b,
     .section-2b,
     .section-3b {
-        padding: 0px 1.5em 1.7em 1.5em;
+        padding: 0px 1.5em 1.7em 1.0em;
     }
 
     .reading-type,
@@ -74,7 +76,7 @@
     .meaning-container,
     .reading-container,
     .context-container {
-        width: 600px;
+        width: 90%;
     }
 
     .section-1a,
@@ -89,7 +91,7 @@
     .section-1b,
     .section-2b,
     .section-3b {
-        padding: 0px 1.7em 1.7em 1.7em;
+        padding: 0px 1.7em 1.7em 1.0em;
     }
 
     .patterns-title {
@@ -117,7 +119,7 @@
     .meaning-container,
     .reading-container,
     .context-container {
-        max-width: 600px;
+        width: 90%;
     }
 
     .section-1a,
@@ -132,7 +134,7 @@
     .section-1b,
     .section-2b,
     .section-3b {
-        padding: 0px 1.7em 1.7em 1.7em;
+        padding: 0px 1.7em 1.7em 1.0em;
     }
 
     .patterns-title {
@@ -160,7 +162,7 @@
     .meaning-container,
     .reading-container,
     .context-container {
-        width: 700px;
+        width: 90%;
     }
 
     .section-1a,
@@ -175,7 +177,7 @@
     .section-1b,
     .section-2b,
     .section-3b {
-        padding: 0px 1.7em 1.7em 1.7em;
+        padding: 0px 1.7em 1.7em 1.0em;
     }
 
     .patterns-title {
@@ -196,9 +198,9 @@
 }
 
 /** MARK: Color Variables 
-*/
+    */
 :root {
-    --color-translations: rgba(255, 255, 255, 0.75);
+    --color-translations: rgba(255, 255, 255, 0.9);
     --color-main-text: #1d1d1d;
     --color-radical: #58bffc;
     --color-radical-dark: #0093dd;
@@ -228,10 +230,12 @@
     text-align: center;
     font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 /** MARK:  Color Highlights 
-*/
+    */
 .no-break {
     white-space: nowrap;
     white-space-collapse: collapse;
@@ -253,7 +257,7 @@ mark {
 }
 
 mark.kanji {
-    font-family: "Noto Sans JP";
+    font-family: "Noto Sans JP", sans-serif;
     background: var(--color-kanji-gradient);
 }
 
@@ -270,12 +274,12 @@ mark.rdng {
 }
 
 /** MARK: Front
-*/
+    */
 .front {
     background-color: var(--color-vocab);
     border-radius: 20px;
     color: #fafafa;
-    padding: 5px 10px 6px 10px;
+    padding: 20px 10px 0px 10px;
     border-radius: 30px;
     min-height: 300px;
 }
@@ -291,20 +295,20 @@ input[type="text"] {
 }
 
 .typed-answer {
-    font-family: "Courier New", monospace;
+    font-family: "Fira Code", monospace;
     font-weight: "300";
     font-size: 1.5rem;
     padding-bottom: 20px;
 }
 
 .input-instructions {
-    font-family: "Noto Sans", "Arial";
+    font-family: "Noto Sans", sans-serif;
     text-align: left;
     font-size: 1rem;
 }
 
 /** MARK: Back
-*/
+    */
 .back {
     background-image: url("_bg-bluepaper01.jpg");
     background-size: 30%;
@@ -316,7 +320,6 @@ input[type="text"] {
 
 .body-content {
     line-height: 1.5em;
-    padding-bottom: 20px;
 }
 
 .hints-box {
@@ -332,11 +335,11 @@ input[type="text"] {
 .hints-box .title {
     font-weight: bold;
 }
+
 .meaning-container,
 .reading-container,
 .context-container {
     display: grid;
-    max-width: 95%;
     margin: 0 auto;
     text-align: left;
     grid-template-columns: 1fr;
@@ -371,7 +374,7 @@ input[type="text"] {
 }
 
 /** MARK: Meaning Section
-*/
+    */
 .meaning-container {
     grid-template-areas:
         "section-1a"
@@ -396,7 +399,7 @@ input[type="text"] {
     display: flex;
     place-self: start;
     font-family: "Fira Code", monospace;
-    font-size: 0.6em;
+    font-size: .65em;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
     box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
@@ -486,7 +489,7 @@ input[type="text"] {
 }
 
 /** MARK: Reading Section
-*/
+    */
 .reading-container {
     grid-template-areas:
         "section-2a"
@@ -537,7 +540,7 @@ input[type="text"] {
 }
 
 /** MARK: Context Section
-*/
+    */
 .context-container {
     grid-template-areas:
         "section-3a"
@@ -584,7 +587,7 @@ input[type="text"] {
 
 
 /** MARK: Context Sentences
-/* Context Sentences w/o JS */
+    /* Context Sentences w/o JS */
 /* to be used until JS behavior is consistent in Anki */
 
 *[class^="sen"] {
@@ -608,7 +611,7 @@ input[type="text"] {
 }
 
 /** MARK: Tag Containers
-*/
+    */
 .tag-box {
     display: inline-block;
     font-family: "Fira Code", monospace;
