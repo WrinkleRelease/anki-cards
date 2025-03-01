@@ -19,7 +19,7 @@ This card calls, and tiles, a small background `.jpg`. Drop it in your /collecti
 
 ## Card Fields
 The Vocab `Note Type` contains the following fields
-- Word
+- Vocabulary
 - Meaning
 - Word Type
 - Components
@@ -28,5 +28,5 @@ The Vocab `Note Type` contains the following fields
 - Reading Type
 - Reading Notes
 - Patterns of Use
-- Context Sentences
+- Context
 - Reading Hint

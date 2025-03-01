@@ -118,7 +118,7 @@ mark.rdng {
     color: #fafafa;
     background-color: #fafafa;
     border-radius: 40px;
-    background-image: url(_bg-radical-paper00.jpg);
+    background-image: url(_bg-bluepaper01.jpg);
     background-size: 20%;
     padding: 20px;
 
@@ -168,7 +168,7 @@ input[type="text"] {
     background-color: #fafafa;
     border-radius: 40px;
     color: var(--color-radical);
-    background-image: url(_bg-radical-paper00.jpg);
+    background-image: url(_bg-bluepaper01.jpg);
     background-size: 15%;
     padding: 20px;
 }
