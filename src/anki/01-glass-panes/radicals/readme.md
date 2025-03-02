@@ -1,6 +1,6 @@
 # Radical Card Template
 Style: `Glass Panes`
-Files: `front.html`, `back.html`, `styles.css`, `_bg-radical-paper00.`
+Individual Files: `front.html`, `back.html`, `styles.css` Shared Files: `_bg-bluepaper01.jpg`, `_shared-styles.css`
 
 ## Front Features
 The `front` contains an input field that asks for the `Reading` of the words, not the meaning. Only one input field per side is supported by Anki. 

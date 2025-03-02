@@ -1,0 +1,178 @@
+/* Anki - Vocab Card - Glass Panes - r1.1 */
+/* github.com/WrinkleRelease */
+
+/* This stylesheet contains the CSS elements shared by all three card types */
+
+/** MARK: Fonts
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+/** MARK: Color Variables 
+    */
+:root {
+    --color-translations: rgba(255, 255, 255, 0.9);
+    --color-main-text: #1d1d1d;
+    --color-radical: #58bffc;
+    --color-radical-dark: #0093dd;
+    --color-radical-gradient: linear-gradient(to bottom,
+            var(--color-radical),
+            var(--color-radical-dark));
+    --color-kanji: #ff00aa;
+    --color-kanji-dark: #dd0093;
+    --color-kanji-gradient: linear-gradient(to bottom,
+            var(--color-kanji),
+            var(--color-kanji-dark));
+    --color-vocab: #9735c9;
+    --color-vocab-dark: #9300dd;
+    --color-vocab-gradient: linear-gradient(to bottom,
+            var(--color-vocab),
+            var(--color-vocab-dark));
+    --color-reading: #555;
+    --color-reading-dark: #484848;
+    --color-reading-gradient: linear-gradient(to bottom,
+            var(--color-reading),
+            var(--color-reading-dark));
+    --type-shadow-1: 0px 0px 3px rgba(18, 15, 15, 0.2),
+        1px 1px 4px rgba(215, 215, 215, 0.2);
+}
+
+.card {
+    text-align: center;
+    font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 1.5em;
+}
+
+.front {
+	margin: 0 auto;
+}
+
+/** MARK:  Color Highlights 
+    */
+.no-break {
+    white-space: nowrap;
+    white-space-collapse: collapse;
+    text-wrap: nowrap;
+}
+
+mark {
+    color: #ffffff;
+    font-size: inherit;
+    border-radius: 4px;
+    display: inline-block;
+    line-height: 0.95em;
+    padding: 3px 3px 4px 3px;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
+    white-space: nowrap;
+    text-wrap: nowrap;
+}
+
+mark.kanji {
+    font-family: "Noto Sans JP", sans-serif;
+    background: var(--color-kanji-gradient);
+}
+
+mark.radical {
+    background: var(--color-radical-gradient);
+}
+
+mark.vocab {
+    background: var(--color-vocab-gradient);
+}
+
+mark.rdng {
+    background: var(--color-reading-gradient);
+}
+
+/** MARK: Answer Input
+*/
+input[type="text"] {
+    font-family: "Fira Code", monospace;
+    font-weight: 300;
+    margin-bottom: 1em;
+    color: white;
+    max-width: 90%;
+    text-align: center;
+    padding: 12px 0px;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+.typed-answer {
+    font-family: "Fira Code", monospace;
+    font-weight: "300";
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+/** MARK: Hint
+*/
+.button {
+    padding: 4px 16px;
+    margin-bottom: 10px;
+}
+
+button:after {
+    font-size: 18px;
+    padding: 0px 50px 0px 50px;
+    margin-bottom: 10px;
+    content: "Show reading hint";
+}
+
+#r-hint {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the inner hint box */
+#r-hint > div {
+  font-family: "Fira Code", monospace;
+  font-size: .8em;
+  background: #777;
+  color: #fff;
+  border: dashed 1px #222;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 80%;
+  text-align: center;
+}
+
+/** MARK: Tags
+    */
+.tag-box {
+    display: inline-block;
+    font-family: "Fira Code", monospace;
+    color: var(--color-main-text);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
+    font-size: 0.6em;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 5px 0px 0px;
+}
+
+#tags-container {
+    margin: 0px 20px 0px 20px;
+}

@@ -1,6 +1,6 @@
 # Vocab Card Template
 Style: `Glass Panes`
-Files: `front.html`, `back.html`, `styles.css`, `_bg-bluepaper01.jpg`
+Individual Files: `front.html`, `back.html`, `styles.css` Shared Files: `_bg-bluepaper01.jpg`, `_shared-styles.css`
 
 ## Features
 The `front` contains an input field that asks for the `Reading` of the words, not the meaning. Only one input field per side is supported by Anki. 
@@ -16,6 +16,9 @@ A few JavaScript code blocks embedded in `back.html` allow for several fields[^2
 
 ## Background Images
 This card calls, and tiles, a small background `.jpg`. Drop it in your /collections.media folder and it should sync fine with mobile versions of Anki.
+
+## Shared Style Sheet
+The three note types in this style pull from a file called `_shared-styles.css`. This files 
 
 ## Card Fields
 The Vocab `Note Type` contains the following fields

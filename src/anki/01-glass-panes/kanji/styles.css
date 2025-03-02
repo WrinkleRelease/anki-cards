@@ -1,12 +1,9 @@
 /* Anki - Kanji Card - Glass Panes - r1.1 */
 /* github.com/WrinkleRelease */
 
-/** # MARK: Fonts 
+/** MARK: External Stylesheet
 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url("_shared-styles.css");
 
 /** # MARK: Breakpoints
 */
@@ -15,143 +12,6 @@
     .prompt {
         font-size: 4em;
     }
-
-    .meaning-container,
-    .reading-container,
-    .context-container {
-        width: 90%;
-    }
-
-    .meaning {
-        font-size: 1.0em;
-    }
-
-
-    .section-1a,
-    .section-2a,
-    .section-3a {
-        padding: 15px 1.5em 10px 1.5em;
-    }
-
-    .section-1b,
-    .section-2b,
-    .section-3b {
-        padding: 0px 1.5em 1.0em 1.5em;
-    }
-
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .prompt {
-        font-size: 5em;
-    }
-
-    .meaning {
-        font-size: 1.2em;
-    }
-
-    .meaning-container,
-    .reading-container,
-    .context-container {
-        width: 90%;
-    }
-
-    .section-1a,
-    .section-2a,
-    .section-3a {
-        padding: 15px 1.7em 10px 1.7em;
-    }
-
-    .section-1b,
-    .section-2b,
-    .section-3b {
-        padding: 0px 1.7em 1.0em 1.7em;
-    }
-
-}
-
-*,
-:after,
-:before {
-    box-sizing: border-box;
-}
-
-.card {
-    text-align: center;
-    font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
-    max-width: 650px;
-    margin: 0 auto;
-    padding-top: 1.5em;
-}
-
-/** MARK: Color Variables
-*/
-:root {
-    --color-translations: rgba(255, 255, 255, 0.75);
-    --color-main-text: #1d1d1d;
-    --color-radical: #58bffc;
-    --color-radical-dark: #0093dd;
-    --color-radical-gradient: linear-gradient(to bottom,
-            var(--color-radical),
-            var(--color-radical-dark));
-    --color-kanji: #ff00aa;
-    --color-kanji-dark: #dd0093;
-    --color-kanji-gradient: linear-gradient(to bottom,
-            var(--color-kanji),
-            var(--color-kanji-dark));
-    --color-vocab: #9735c9;
-    --color-vocab-dark: #9300dd;
-    --color-vocab-gradient: linear-gradient(to bottom,
-            var(--color-vocab),
-            var(--color-vocab-dark));
-    --color-reading: #555;
-    --color-reading-dark: #484848;
-    --color-reading-gradient: linear-gradient(to bottom,
-            var(--color-reading),
-            var(--color-reading-dark));
-    --type-shadow-1: 0px 0px 3px rgba(18, 15, 15, 0.2),
-        1px 1px 4px rgba(215, 215, 215, 0.2);
-}
-
-/** MARK: Color Highlighting
-*/
-.no-break {
-    white-space: nowrap;
-    white-space-collapse: collapse;
-    text-wrap: nowrap;
-}
-
-mark {
-    color: #ffffff;
-    font-size: inherit;
-    border-radius: 4px;
-    display: inline-block;
-    line-height: 0.95em;
-    padding: 3px 3px 4px 3px;
-    text-align: center;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
-    white-space: nowrap;
-    text-wrap: nowrap;
-}
-
-mark.kanji {
-    font-family: "Noto Sans JP";
-    background: var(--color-kanji-gradient);
-}
-
-mark.radical {
-    background: var(--color-radical-gradient);
-}
-
-mark.vocab {
-    background: var(--color-vocab-gradient);
-}
-
-mark.rdng {
-    background: var(--color-reading-gradient);
 }
 
 /** MARK: Front
@@ -159,33 +19,9 @@ mark.rdng {
 .front {
     background-color: var(--color-kanji);
     border-radius: 20px;
+    align-content: center;
     color: #fafafa;
-    padding: 5px 10px 6px 10px;
-    border-radius: 30px;
-    min-height: 300px;
-}
-
-input[type="text"] {
-    width: 100%;
-    font-weight: 300;
-    color: white;
-    text-align: center;
-    padding: 12px 0px;
-    border-radius: 10px;
-    font-size: 1.2em;
-}
-
-.typed-answer {
-    font-family: "Fira Code", monospace;
-    font-weight: "300";
-    font-size: 1.5rem;
-    padding-bottom: 20px;
-}
-
-.input-instructions {
-    font-family: "Noto Sans", "Arial";
-    text-align: left;
-    font-size: 1rem;
+    padding: 20px;
 }
 
 /** MARK: Back
@@ -196,19 +32,18 @@ input[type="text"] {
     background-color: #a2b8bc;
     border-radius: 20px;
     color: #4d4d4d;
-    padding: 0px 0px 30px 0px;
+    padding: 30px 0px 30px 0px;
 }
 
 .meaning-container,
-.stroke-order-container,
 .reading-container {
     grid-auto-flow: row;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
-    gap: 0px 0px;
+    gap: 0px;
     text-align: left;
-    max-width: 600px;
     margin: 0 auto;
+    max-width: 90%;
 }
 
 .section-1a,
@@ -220,6 +55,7 @@ input[type="text"] {
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(2px);
+    padding: 15px 1.7em 10px 1.7em;
 }
 
 .section-1b,
@@ -232,7 +68,7 @@ input[type="text"] {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     border-right: 1px solid rgba(255, 255, 255, 0.3);
-    padding-top: 15px;
+    padding: 15px 1.7em 1.0em 1.7em;
 }
 
 .body-content {
@@ -279,18 +115,30 @@ input[type="text"] {
 
 .section-1a {
     display: grid;
-    grid-template-columns: 5em auto auto;
+    grid-template-columns: auto 90px;
     grid-template-rows: repeat(2, auto);
-    gap: 10px;
-    grid-auto-flow: row;
+    gap: 0px 0px;
     grid-template-areas:
-        "sub-container sub-container section-name"
-        "sub-container sub-container stroke-order-img";
+        "sub-container section-name"
+        "sub-container stroke-order-img";
     grid-area: section-1a;
 }
 
+.sub-container {
+    display: grid;
+    gap: 0px 0px;
+    grid-template-columns: 5em auto;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: row;
+    grid-template-areas:
+        "prompt reading"
+        "prompt meaning"
+        "components components";
+    grid-area: sub-container;
+}
+
 .stroke-order-img {
-    display: absolute;
+    display: flex;
     margin-right: -10px;
     justify-self: right;
     align-self: end;
@@ -298,41 +146,30 @@ input[type="text"] {
     width: 90px;
 }
 
-.sub-container {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, auto);
-    grid-auto-flow: row;
-    grid-template-areas:
-        "prompt meaning"
-        "prompt reading"
-        "components components";
-    grid-area: sub-container;
+.reading {
+    grid-area: reading;
+    align-self: end;
+    border: collapse;
+    font-family: "Noto Serif JP", serif;
 }
 
 .meaning {
-    justify-self: left;
-    align-self: end;
-    display: block;
     grid-area: meaning;
+    align-self: start;
+    border: collapse;
     font-family: "Noto Sans", sans-serif;
+    font-size: 1.5em;
     color: #3d3d3d;
     font-weight: 800;
 }
 
-.reading {
-    justify-self: left;
-    align-self: start;
-    display: block;
-    grid-area: reading;
-    font-family: "Noto Serif JP", serif;
-}
-
 .prompt {
+    border: collapse;
     grid-area: prompt;
+    font-size: 5em;
     font-family: "Noto Sans JP", sans-serif;
     color: var(--color-kanji);
-    font-weight: 500;
+    font-weight: 400;
     place-self: start;
     margin-top: -25px;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
@@ -398,7 +235,7 @@ input[type="text"] {
 
 .section-3a {
     display: grid;
-    grid-template-columns: repeat(2, auto) 1fr;
+    grid-template-columns: repeat(2, auto) 40px;
     grid-template-rows: repeat(3, auto);
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -416,7 +253,6 @@ input[type="text"] {
     grid-area: rdgs-table;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -427,6 +263,8 @@ input[type="text"] {
 
 .rdgs-tbody {
     display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .rdgs-theader-left,
@@ -438,17 +276,18 @@ input[type="text"] {
     padding: 3px 10px;
 }
 
-.on-rdng-container {
-    margin-bottom: 5px;
-}
-
+.on-rdng-container,
 .kun-rdng-container {
+    display: flex;
+    flex: 1;
     margin-bottom: 5px;
+    overflow: hidden;
+    min-width: 0;
 }
 
 .on-rdng-box,
 .kun-rdng-box {
-    display: inline-block;
+    display: inline-flex;
     font-family: "Noto Serif JP", serif;
     font-size: 0.9em;
     background-color: rgba(218, 191, 231, 0);
@@ -477,59 +316,4 @@ input[type="text"] {
     grid-area: reading-notes;
     font-size: 0.9em;
     color: #3d3d3d;
-}
-
-/** MARK: Tag Containers
-*/
-.tag-box {
-    display: inline-block;
-    font-family: "Fira Code", monospace;
-    color: var(--color-main-text);
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.15);
-    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
-    font-size: 0.6em;
-    padding: 5px 15px 5px 15px;
-    margin: 0px 5px 0px 0px;
-}
-
-#tags-container {
-    margin: 0px 20px 0px 20px;
-}
-
-/** MARK: Front Reading Hints
-*/
-.button {
-    padding: 4px 16px;
-    margin-bottom: 10px;
-}
-
-button:after {
-    font-size: 18px;
-    padding: 0px 50px 0px 50px;
-    margin-bottom: 10px;
-    content: "Show reading hint";
-}
-
-.r-hint-box {
-    border: dashed 1px;
-    border-radius: 5px;
-    margin: 10px 30px 10px 30px;
-    padding: 0px 15px 0px 15px;
-    border-color: #222;
-    background-color: #777;
-}
-
-.r-hint-text {
-    font-size: 18px;
-    padding: 10px 0px 10px 0px;
-    color: #fff;
-}
-
-.ipad .r-hint-text {
-    font-size: 1em;
-    padding: 10px 0px 10px 0px;
-    color: #fff;
 }

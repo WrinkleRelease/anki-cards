@@ -1,0 +1,1 @@
+Move these two files into your `/collections.media/` folder. The `_` in the filename is important. It ensures Anki does not delete the files and syncs them to AnkiWeb, which, in turn, makes them available on all deices.

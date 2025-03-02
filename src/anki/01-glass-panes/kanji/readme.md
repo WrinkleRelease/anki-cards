@@ -1,6 +1,9 @@
 # Kanji Card Template
 Style: `Glass Panes`
-Files: `front.html`, `back.html`, `styles.css`, `_bg-bluepaper01.jpg`
+Individual Files: `front.html`, `back.html`, `styles.css` Shared Files: `_bg-bluepaper01.jpg`, `_shared-styles.css`
+
+## Shared Files
+All three note types (`vocab`, `kanji`, and `radicals`) depend on two shared files. These files are included 
 
 ## Front Features
 The `front` contains an input field that asks for the `Reading` of the words, not the meaning. Only one input field per side is supported by Anki. 
