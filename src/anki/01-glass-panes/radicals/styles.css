@@ -32,10 +32,10 @@
 /** MARK: Front
 */
 .front {
-    color: #fafafa;
-    background-color: var(--color-radical);
     align-content: center;
+    background-color: var(--color-radical);
     border-radius: 20px;
+    color: #fafafa;
 }
 
 .prompt {
@@ -46,61 +46,61 @@
 */
 .back {
     background-color: #fafafa;
-    border-radius: 40px;
-    color: var(--color-radical);
     background-image: url(_bg-bluepaper01.jpg);
     background-size: 15%;
+    border-radius: 40px;
+    color: var(--color-radical);
     padding: 20px;
 }
 
 .back-container {
+    border: 1px solid rgba(88, 191, 252, 0.2);
+    border-radius: 40px;
+    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.2);
     display: grid;
     grid-template-areas:
         "section-1a"
         "section-1b";
-    overflow: hidden;
-    border-radius: 40px;
-    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(88, 191, 252, 0.2);
     margin: 0 auto;
+    overflow: hidden;
     width: 90%;
 }
 
 .section-1a {
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.6);
     display: grid;
-    grid-template-rows: repeat(2, auto);
+    grid-area: section-1a;
     grid-template-areas:
         "prompt"
         "typed-answer";
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(2px);
-    grid-area: section-1a;
+    grid-template-rows: repeat(2, auto);
 }
 
 .section-1b {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.1);
     display: grid;
-    grid-template-rows: repeat(2, auto);
+    grid-area: section-1b;
+    grid-auto-flow: row;
     grid-template-areas:
         "memory-hint"
         "mnemonic-text";
-    grid-auto-flow: row;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    grid-area: section-1b;
+    grid-template-rows: repeat(2, auto);
 }
 
 .memory-hint {
-    text-align: left;
-    padding: 10px 20px 0px 20px;
-    grid-area: memory-hint;
     color: var(--color-main-text);
+    grid-area: memory-hint;
+    padding: 10px 20px 0px 20px;
+    text-align: left;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .mnemonic-text {
+    color: var(--color-main-text);
     font-size: 1em;
+    grid-area: mnemonic-text;
     padding: 0px 20px 20px 20px;
     text-align: left;
-    color: var(--color-main-text);
-    grid-area: mnemonic-text;
 }

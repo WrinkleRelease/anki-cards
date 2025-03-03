@@ -1,57 +1,59 @@
 <!-- Anki - Kanji Card - Glass Panes - r1.1 -->
 <!-- github.com/WrinkleRelease -->
 
-<div class="back">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
 
+    <div class="back">
+        <!-- <div class="typed-answer">{{type:Reading}}</div> -->
 
-    <!-- <div class="typed-answer">{{type:Reading}}</div> -->
-
-    <!-- MARK: Meaning Section 
+        <!-- MARK: Meaning Section 
      -->
-    <div class="meaning-container">
-        <div class="section-1a">
-            <div class="stroke-order-img">{{Stroke Order}}</div>
-            <div class="section-name">meaning</div>
-            <div class="sub-container">
-                <div class="components">{{Components}}</div>
-                <div class="prompt">{{Kanji}}</div>
-				 <div class="reading">{{Reading}}</div>
-                <div class="meaning">{{Meaning}}</div>
+        <div class="meaning-container">
+            <div class="section-1a">
+                <div class="stroke-order-img">{{Stroke Order}}</div>
+                <div class="section-name">meaning</div>
+                <div class="sub-container">
+                    <div class="components">{{Components}}</div>
+                    <div class="prompt">{{Kanji}}</div>
+                    <div class="reading">{{Reading}}</div>
+                    <div class="meaning">{{Meaning}}</div>
+                </div>
+
+
             </div>
-            
-            
-        </div>
-        <div class="section-1b">
-            <div class="meaning-notes">{{Meaning Notes}}</div>
-        </div>
-    </div>
-    
-    <!-- MARK: Reading Section 
-     -->
-    <div class="reading-container">
-        <div class="section-3a">
-            <div class="section-name">reading</div>
-            <div class="rdgs-table">
-                <div class="rdgs-theader">
-                    <div class="rdgs-theader-left">On'yomi</div>
-                    <div class="rdgs-theader-right">Kun'yomi</div>
-                </div>
-                <div class="rdgs-tbody">
-                    <div id="on-rdng-container" class="rdgs-tbody-left"></div>
-                    <div id="kun-rdng-container" class="rdgs-tbody-right"></div>
-                </div>
+            <div class="section-1b">
+                <div class="meaning-notes">{{Meaning Notes}}</div>
             </div>
         </div>
-        <div class="section-3b">
-            <div class="reading-notes">{{Reading Notes}}</div>
+
+        <!-- MARK: Reading Section 
+     -->
+        <div class="reading-container">
+            <div class="section-3a">
+                <div class="section-name">reading</div>
+                <div class="rdgs-table">
+                    <div class="rdgs-theader">
+                        <div class="rdgs-theader-left">On'yomi</div>
+                        <div class="rdgs-theader-right">Kun'yomi</div>
+                    </div>
+                    <div class="rdgs-tbody">
+                        <div id="on-rdng-container" class="rdgs-tbody-left"></div>
+                        <div id="kun-rdng-container" class="rdgs-tbody-right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-3b">
+                <div class="reading-notes">{{Reading Notes}}</div>
+            </div>
         </div>
+
+        <!-- Tags -->
+        <div id="tags-container"></div>
+
     </div>
-
-    <!-- Tags -->
-    <div id="tags-container"></div>
-
-</div>
-
 
 <!-- MARK: Javascript
      -->

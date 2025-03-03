@@ -1,4 +1,4 @@
-/* Anki - Vocab Card - Glass Panes - r1.1 */
+/* Anki - Shared Styles - Glass Panes - r1.1 */
 /* github.com/WrinkleRelease */
 
 /* This stylesheet contains the CSS elements shared by all three card types */
@@ -175,4 +175,24 @@ button:after {
 
 #tags-container {
     margin: 0px 20px 0px 20px;
+}
+
+/** MARK: Content Formatting
+*/
+.body-content {
+    line-height: 1.5em;
+}
+
+.hints-box {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
+    font-family: "Fira Code", monospace;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    padding: 0px 15px 15px 15px;
+}
+
+.hints-box .title {
+    font-weight: bold;
 }

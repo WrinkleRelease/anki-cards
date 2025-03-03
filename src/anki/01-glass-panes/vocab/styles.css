@@ -8,14 +8,15 @@
 
 /** MARK: Breakpoints 
 */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Mobile */
+.mobile {
+
     .prompt {
         font-size: 2.5em;
         margin-top: 0px;
     }
 
-    .meaning {
+    .section-1a .meaning {
         font-size: 1.0em;
     }
 
@@ -25,82 +26,37 @@
         width: 90%;
     }
 
-    .section-1a,
-    .section-2a {
+    .back .section-1a,
+    .back .section-2a {
         padding: 15px 1.5em 10px 1.5em;
     }
 
-    .section-3a {
+    .back .section-3a {
         padding: 15px 1.5em 5px 1.5em;
     }
 
-    .section-1b,
-    .section-2b,
-    .section-3b {
+    .back [class^="section-"][class$="b"] {
         padding: 0px 1.5em 1.7em 1.0em;
     }
 
-    .reading-type,
-    .patterns-title {
+    .section-2a .reading-type,
+    .section-3a .patterns-title {
         font-size: 0.9em;
     }
 
-    .use-patterns {
+    .section-3a .use-patterns {
         display: inline-block;
         margin: 0px 5px 5px 0px;
     }
 
-    .patterns-title {
+    .section-3a .patterns-title {
         align-self: center;
     }
-
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .prompt {
-        font-size: 4em;
-        margin-top: -15px;
-    }
-
-    .meaning {
-        font-size: 1.0em;
-    }
-
-    .meaning-container,
-    .reading-container,
-    .context-container {
-        width: 90%;
-    }
-
-    .section-1a,
-    .section-2a {
-        padding: 15px 1.7em 10px 1.7em;
-    }
-
-    .section-3a {
-        padding: 15px 1.7em 5px 1.7em;
-    }
-
-    .section-1b,
-    .section-2b,
-    .section-3b {
-        padding: 0px 1.7em 1.7em 1.0em;
-    }
-
-    .patterns-title {
-        align-self: center;
-    }
-
-    .use-patterns {
-        display: inline-block;
-        margin: 0px 5px 5px 0px;
-    }
-
-}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
     .prompt {
         font-size: 4.1em;
         margin-top: -15px;
@@ -125,9 +81,7 @@
         padding: 15px 1.7em 5px 1.7em;
     }
 
-    .section-1b,
-    .section-2b,
-    .section-3b {
+    [class^="section-"][class$="b"] {
         padding: 0px 1.7em 1.7em 1.0em;
     }
 
@@ -139,128 +93,64 @@
         display: inline-block;
         margin: 0px 5px 0px 0px;
     }
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .prompt {
-        font-size: 4.1em;
-        margin-top: -15px;
-    }
-
-    .meaning {
-        font-size: 1.3em;
-    }
-
-    .meaning-container,
-    .reading-container,
-    .context-container {
-        width: 90%;
-    }
-
-    .section-1a,
-    .section-2a {
-        padding: 15px 1.7em 10px 1.7em;
-    }
-
-    .section-3a {
-        padding: 15px 1.7em 5px 1.7em;
-    }
-
-    .section-1b,
-    .section-2b,
-    .section-3b {
-        padding: 0px 1.7em 1.7em 1.0em;
-    }
-
-    .patterns-title {
-        align-self: center;
-    }
-
-    .use-patterns {
-        display: inline-block;
-        margin: 0px 5px 0px 0px;
-    }
-
 }
 
 /** MARK: Front
     */
 .front {
-    background-color: var(--color-vocab);
-    color: #fafafa;
     align-content: center;
+    background-color: var(--color-vocab);
     border-radius: 20px;
-		padding: 20px;
+    color: #fafafa;
+    padding: 20px;
 }
-
-
 
 /** MARK: Back
     */
 .back {
+    background-color: #a2b8bc;
     background-image: url("_bg-bluepaper01.jpg");
     background-size: 30%;
-    background-color: #a2b8bc;
     border-radius: 20px;
     color: #4d4d4d;
     padding: 30px 0px 30px 0px;
-}
-
-.body-content {
-    line-height: 1.5em;
-}
-
-.hints-box {
-    line-height: 1.5em;
-    font-family: "Fira Code", monospace;
-    font-size: 0.8em;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
-    padding: 0px 20px 15px 20px;
-}
-
-.hints-box .title {
-    font-weight: bold;
 }
 
 .meaning-container,
 .reading-container,
 .context-container {
     display: grid;
-    margin: 0 auto;
-    text-align: left;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
     gap: 0;
     grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    margin: 0 auto;
+    text-align: left;
 }
 
 .section-1a,
 .section-2a,
 .section-3a {
-    border-radius: 40px 40px 0px 0px;
-    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px 40px 0px 0px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .section-1b,
 .section-2b,
 .section-3b {
-    grid-auto-flow: row;
-    border-radius: 0px 0px 40px 40px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0px 0px 40px 40px;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    grid-auto-flow: row;
 }
 
 /** MARK: Meaning Section
@@ -273,35 +163,35 @@
 
 .section-1a {
     display: grid;
-    grid-template-columns: auto auto 30px;
-    grid-template-rows: repeat(3, auto);
     gap: 10px;
+    grid-area: section-1a;
     grid-auto-flow: row;
     grid-template-areas:
         "prompt prompt section-name"
         "word-type word-type section-name"
         "components components section-name";
-    grid-area: section-1a;
+    grid-template-columns: auto auto 30px;
+    grid-template-rows: repeat(3, auto);
 }
 
 .section-name {
-    grid-area: section-name;
-    display: flex;
-    place-self: start;
-    font-family: "Fira Code", monospace;
-    font-size: .65em;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
     box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
-    writing-mode: vertical-lr;
+    display: flex;
+    font-family: "Fira Code", monospace;
+    font-size: .65em;
+    grid-area: section-name;
     padding: 10px 10px 10px 10px;
+    place-self: start;
+    writing-mode: vertical-lr;
 }
 
 .section-1a>.prompt {
-    grid-area: prompt;
-    font-family: "Noto Sans JP", sans-serif;
     color: var(--color-vocab);
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: 500;
+    grid-area: prompt;
     place-self: start;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
@@ -312,30 +202,30 @@
 }
 
 .word-type {
-    grid-area: word-type;
-    display: inline-block;
-    justify-self: center;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: normal;
-    color: #fff;
-    font-size: 0.7em;
     background-color: #bdb8a6;
     border-radius: 15px;
-    padding: 0px 10px 3px 10px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 0.7em;
+    font-weight: normal;
+    grid-area: word-type;
+    justify-self: center;
     margin-right: 3px;
+    padding: 0px 10px 3px 10px;
 }
 
 .components {
-    grid-area: components;
-    font-weight: 400;
-    font-size: 0.8em;
-    color: #2d2d2d;
+    align-self: center;
     background-color: rgba(218, 191, 231, 0);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    justify-self: start;
-    align-self: center;
     border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: #2d2d2d;
+    font-size: 0.8em;
+    font-weight: 400;
+    grid-area: components;
+    justify-self: start;
     padding: 8px 10px 8px 10px;
 }
 
@@ -349,31 +239,31 @@
 
 .section-1b {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto 1fr;
     gap: 0px;
+    grid-area: section-1b;
     grid-template-areas:
         "meaning"
         "meaning-notes";
-    grid-area: section-1b;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
     padding-top: 0.2em;
 }
 
 .meaning {
-    grid-area: meaning;
-    text-align: center;
-    font-family: "Noto Sans", sans-serif;
-    color: #3d3d3d;
-    font-weight: 800;
-    padding: 15px 0px 20px 0px;
     background-color: rgba(255, 255, 255, 0.0);
     border-bottom: 1px dashed #4d4d4d;
+    color: #3d3d3d;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 800;
+    grid-area: meaning;
+    padding: 15px 0px 20px 0px;
+    text-align: center;
 }
 
 .meaning-notes {
-    grid-area: meaning-notes;
-    font-size: 0.9em;
     color: #3d3d3d;
+    font-size: 0.9em;
+    grid-area: meaning-notes;
     margin-top: 20px;
 
 }
@@ -388,44 +278,44 @@
 
 .section-2a {
     display: grid;
-    grid-template-columns: auto 35px;
-    grid-template-rows: auto auto;
     gap: 0px;
+    grid-area: section-2a;
     grid-template-areas:
         "reading-type section-name"
         "reading section-name";
+    grid-template-columns: auto 35px;
+    grid-template-rows: auto auto;
     margin-top: 20px;
-    grid-area: section-2a;
 }
 
 .reading-type {
-    grid-area: reading-type;
-    justify-self: start;
     align-self: end;
     color: #4d4d4d;
     font-weight: 700;
+    grid-area: reading-type;
+    justify-self: start;
 }
 
 .reading {
-    grid-area: reading;
-    font-family: "Noto Serif JP", sans-serif;
     align-self: start;
+    font-family: "Noto Serif JP", sans-serif;
+    grid-area: reading;
     justify-self: start;
 }
 
 .section-2b {
     display: grid;
-    overflow: auto;
+    grid-area: section-2b;
+    grid-template-areas: "reading-notes";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "reading-notes";
-    grid-area: section-2b;
+    overflow: auto;
 }
 
 .reading-notes {
-    grid-area: reading-notes;
-    font-size: 0.9em;
     color: #3d3d3d;
+    font-size: 0.9em;
+    grid-area: reading-notes;
     margin-top: 10px;
 }
 
@@ -439,40 +329,40 @@
 
 .section-3a {
     display: grid;
+    grid-area: section-3a;
     grid-gap: 0px;
-    grid-template-columns: auto 35px;
-    grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "patterns-title section-name"
         "use-patterns  section-name";
+    grid-template-columns: auto 35px;
+    grid-template-rows: 1fr 1fr;
     margin-top: 20px;
-    grid-area: section-3a;
 }
 
 .patterns-title {
+    align-content: end;
     color: #4d4d4d;
     font-weight: 700;
     grid-area: patterns-title;
     justify-self: start;
-    align-content: end;
 }
 
 .use-patterns {
-    grid-area: use-patterns;
-    font-family: "Noto Serif JP", sans-serif;
-    font-size: 0.9em;
     background-color: rgba(218, 191, 231, 0);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
     border-radius: 7px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    font-family: "Noto Serif JP", sans-serif;
+    font-size: 0.9em;
+    grid-area: use-patterns;
     padding: 2px 5px 2px 5px;
 }
 
 .section-3b {
     display: flex;
-    overflow: auto;
-    margin-bottom: 1.0em;
     grid-area: section-3b;
+    margin-bottom: 1.0em;
+    overflow: auto;
 }
 
 
@@ -482,17 +372,17 @@
 
 *[class^="sen"] {
     color: var(--color-main-text);
+    display: block;
     font-family: "Noto Serif JP";
     font-size: 1em;
-    display: block;
     margin-top: 1em;
 }
 
 *[class^="tran"] {
-    font-weight: 300;
+    color: var(--color-translations);
     display: block;
     font-size: 0.75em;
-    color: var(--color-translations);
+    font-weight: 300;
     margin-bottom: 1em;
 }
 

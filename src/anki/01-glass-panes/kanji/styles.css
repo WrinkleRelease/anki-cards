@@ -5,21 +5,65 @@
 */
 @import url("_shared-styles.css");
 
-/** # MARK: Breakpoints
+/** MARK: Breakpoints
 */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .prompt {
-        font-size: 4em;
+
+/* iPhone XS */
+@media only screen and (width: 375px) and (height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .section-1a .prompt {
+        align-self: end;
+        font-size: 3em;
+        justify-self: left;
+        margin-top: -5px;
+    }
+
+    .section-1a .meaning {
+        align-self: center;
+        font-size: 0.70em;
+        font-weight: 300px;
+        justify-self: left;
+        margin-top: -1em;
+    }
+
+    .section-1a .reading {
+        align-self: end;
+        font-size: 0.9em;
+        justify-self: left;
+        text-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .back .section-1a {
+        grid-template-columns: auto 50px;
+    }
+
+    .section-1a .sub-container {
+        grid-template-columns: 3em auto;
+    }
+
+    .section-1a .components {
+        font-size: 0.6em;
+    }
+
+    .card .body-content {
+        font-size: 0.9em;
+    }
+
+    .card .hints-box {
+        font-size: 0.75em;
+    }
+
+    .section-1a .stroke-order-img {
+        width: 50px;
     }
 }
 
 /** MARK: Front
 */
 .front {
+    align-content: center;
     background-color: var(--color-kanji);
     border-radius: 20px;
-    align-content: center;
     color: #fafafa;
     padding: 20px;
 }
@@ -27,9 +71,9 @@
 /** MARK: Back
 */
 .back {
+    background-color: #a2b8bc;
     background-image: url("_bg-bluepaper01.jpg");
     background-size: 30%;
-    background-color: #a2b8bc;
     border-radius: 20px;
     color: #4d4d4d;
     padding: 30px 0px 30px 0px;
@@ -37,70 +81,51 @@
 
 .meaning-container,
 .reading-container {
+    gap: 0px;
     grid-auto-flow: row;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
-    gap: 0px;
-    text-align: left;
     margin: 0 auto;
     max-width: 90%;
+    text-align: left;
 }
 
 .section-1a,
 .section-3a {
-    border-radius: 40px 40px 0px 0px;
-    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px 40px 0px 0px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.1);
     padding: 15px 1.7em 10px 1.7em;
 }
 
 .section-1b,
 .section-3b {
-    grid-auto-flow: row;
-    border-radius: 0px 0px 40px 40px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2px);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0px 0px 40px 40px;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    grid-auto-flow: row;
     padding: 15px 1.7em 1.0em 1.7em;
 }
 
-.body-content {
-    line-height: 1.5em;
-    padding-bottom: 20px;
-}
-
-.hints-box {
-    line-height: 1.5em;
-    font-family: "Fira Code", monospace;
-    font-size: 0.8em;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
-    padding: 0px 20px 15px 20px;
-}
-
-.hints-box .title {
-    font-weight: bold;
-}
-
 .section-name {
-    grid-area: section-name;
-    justify-self: right;
     align-self: start;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
     font-family: "Fira Code";
     font-size: 0.6em;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
-    writing-mode: vertical-lr;
+    grid-area: section-name;
+    justify-self: right;
     padding: 10px 10px 10px 10px;
+    writing-mode: vertical-lr;
 }
 
 /** MARK: Meaning Section
@@ -115,63 +140,63 @@
 
 .section-1a {
     display: grid;
-    grid-template-columns: auto 90px;
-    grid-template-rows: repeat(2, auto);
     gap: 0px 0px;
+    grid-area: section-1a;
     grid-template-areas:
         "sub-container section-name"
         "sub-container stroke-order-img";
-    grid-area: section-1a;
+    grid-template-columns: auto 80px;
+    grid-template-rows: repeat(2, auto);
 }
 
 .sub-container {
     display: grid;
     gap: 0px 0px;
-    grid-template-columns: 5em auto;
-    grid-template-rows: repeat(3, auto);
+    grid-area: sub-container;
     grid-auto-flow: row;
     grid-template-areas:
         "prompt reading"
         "prompt meaning"
         "components components";
-    grid-area: sub-container;
+    grid-template-columns: 4.5em auto;
+    grid-template-rows: repeat(3, auto);
 }
 
 .stroke-order-img {
-    display: flex;
-    margin-right: -10px;
-    justify-self: right;
     align-self: end;
+    display: flex;
     grid-area: stroke-order-img;
-    width: 90px;
+    justify-self: right;
+    margin-right: -10px;
+    width: 80px;
 }
 
 .reading {
-    grid-area: reading;
     align-self: end;
     border: collapse;
     font-family: "Noto Serif JP", serif;
+    grid-area: reading;
 }
 
 .meaning {
-    grid-area: meaning;
     align-self: start;
     border: collapse;
+    color: #3d3d3d;
     font-family: "Noto Sans", sans-serif;
     font-size: 1.5em;
-    color: #3d3d3d;
-    font-weight: 800;
+    font-weight: 600;
+    grid-area: meaning;
 }
 
 .prompt {
     border: collapse;
-    grid-area: prompt;
-    font-size: 5em;
-    font-family: "Noto Sans JP", sans-serif;
     color: var(--color-kanji);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 4.5em;
     font-weight: 400;
-    place-self: start;
-    margin-top: -25px;
+    grid-area: prompt;
+    margin-top: -20px;
+    place-self: end;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -181,15 +206,15 @@
 }
 
 .components {
-    grid-area: components;
-    font-weight: 400;
-    font-size: 0.8em;
+    align-self: center;
     background-color: rgba(218, 191, 231, 0);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    justify-self: start;
-    align-self: center;
     border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    font-size: 0.8em;
+    font-weight: 400;
+    grid-area: components;
+    justify-self: start;
     padding: 8px 10px 8px 10px;
 }
 
@@ -203,57 +228,57 @@
 
 .section-1b {
     display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
     gap: 0px 0px;
+    grid-area: section-1b;
+    grid-auto-flow: row;
     grid-auto-flow: row;
     grid-template-areas:
         "meaning-notes";
-    grid-area: section-1b;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
 
 .meaning-notes {
-    grid-area: meaning-notes;
-    font-size: 0.9em;
     color: #3d3d3d;
+    font-size: 0.9em;
+    grid-area: meaning-notes;
 }
 
 /** MARK: Reading Section
 */
 .reading-container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "section-3a"
         "section-3b";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
     margin-bottom: 1em;
 }
 
 .section-3a {
     display: grid;
-    grid-template-columns: repeat(2, auto) 40px;
-    grid-template-rows: repeat(3, auto);
     gap: 0px 0px;
+    grid-area: section-3a;
     grid-auto-flow: row;
     grid-template-areas:
         "rdgs-table rdgs-table section-name"
         "rdgs-table rdgs-table section-name"
         "rdgs-table rdgs-table section-name";
-    grid-area: section-3a;
+    grid-template-columns: repeat(2, auto) 40px;
+    grid-template-rows: repeat(3, auto);
 }
 
 .rdgs-table {
     display: flex;
-    font-size: .8em;
-    text-align: left;
-    grid-area: rdgs-table;
     flex-direction: column;
-    width: 100%;
+    font-size: .8em;
+    grid-area: rdgs-table;
     margin: 0 auto;
+    text-align: left;
+    width: 100%;
 }
 
 .rdgs-theader {
@@ -271,9 +296,9 @@
 .rdgs-theader-right,
 .rdgs-tbody-left,
 .rdgs-tbody-right {
-    flex: 1;
     box-sizing: border-box;
-    padding: 3px 10px;
+    flex: 1;
+    padding: 3px 0px;
 }
 
 .on-rdng-container,
@@ -281,39 +306,39 @@
     display: flex;
     flex: 1;
     margin-bottom: 5px;
-    overflow: hidden;
     min-width: 0;
+    overflow: hidden;
 }
 
 .on-rdng-box,
 .kun-rdng-box {
+    align-self: center;
+    background-color: rgba(218, 191, 231, 0);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     display: inline-flex;
     font-family: "Noto Serif JP", serif;
     font-size: 0.9em;
-    background-color: rgba(218, 191, 231, 0);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     justify-self: start;
-    align-self: center;
-    border-radius: 10px;
-    padding: 2px 6px;
     margin: 0px 4px 2px 0px;
+    padding: 2px 6px;
 }
 
 .section-3b {
     display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
     gap: 0px 0px;
+    grid-area: section-3b;
+    grid-auto-flow: row;
     grid-auto-flow: row;
     grid-template-areas:
         "reading-notes";
-    grid-area: section-3b;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
 
 .reading-notes {
-    grid-area: reading-notes;
-    font-size: 0.9em;
     color: #3d3d3d;
+    font-size: 0.9em;
+    grid-area: reading-notes;
 }
