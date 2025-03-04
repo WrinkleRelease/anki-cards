@@ -8,55 +8,58 @@
 /** MARK: Breakpoints
 */
 
-/* iPhone XS */
-@media only screen and (width: 375px) and (height: 812px) and (-webkit-device-pixel-ratio: 3) {
-    .section-1a .prompt {
-        align-self: end;
-        font-size: 3em;
-        justify-self: left;
-        margin-top: -5px;
-    }
+/* iPhone */
+.iphone {
 
-    .section-1a .meaning {
-        align-self: center;
-        font-size: 0.70em;
-        font-weight: 300px;
-        justify-self: left;
-        margin-top: -1em;
+    .front { padding-top: 0px; }
+    
+        .section-1a .prompt {
+            align-self: end;
+            font-size: 3em;
+            justify-self: left;
+            margin-top: -5px;
+        }
+    
+        .meaning {
+            align-self: center;
+            font-size: 0.85em;
+            font-weight: 300px;
+            justify-self: left;
+            margin-top: -1em;
+        }
+    
+        .reading {
+            align-self: end;
+            font-size: 0.9em;
+            justify-self: left;
+            text-wrap: nowrap;
+            white-space: nowrap;
+        }
+    
+       .section-1a {
+            grid-template-columns: auto 50px;
+        }
+    
+        .sub-container {
+            grid-template-columns: 3em auto;
+        }
+    
+        .components {
+            font-size: 0.6em;
+        }
+    
+        .body-content {
+            font-size: 0.9em;
+        }
+    
+        .hints-box {
+            font-size: 0.75em;
+        }
+    
+        .stroke-order-img {
+            width: 50px;
+        }
     }
-
-    .section-1a .reading {
-        align-self: end;
-        font-size: 0.9em;
-        justify-self: left;
-        text-wrap: nowrap;
-        white-space: nowrap;
-    }
-
-    .back .section-1a {
-        grid-template-columns: auto 50px;
-    }
-
-    .section-1a .sub-container {
-        grid-template-columns: 3em auto;
-    }
-
-    .section-1a .components {
-        font-size: 0.6em;
-    }
-
-    .card .body-content {
-        font-size: 0.9em;
-    }
-
-    .card .hints-box {
-        font-size: 0.75em;
-    }
-
-    .section-1a .stroke-order-img {
-        width: 50px;
-    }
-}
 
 /** MARK: Front
 */
