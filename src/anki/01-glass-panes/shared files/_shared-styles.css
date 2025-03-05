@@ -47,12 +47,12 @@
 }
 
 .card {
-    text-align: center;
     font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
-    max-width: 700px;
     margin: 0 auto;
+    max-width: 700px;
     padding-top: 1.5em;
+    text-align: center;
 }
 
 .front {
@@ -62,28 +62,28 @@
 /** MARK:  Color Highlights 
     */
 .no-break {
+    text-wrap: nowrap;
     white-space: nowrap;
     white-space-collapse: collapse;
-    text-wrap: nowrap;
 }
 
 mark {
-    color: #ffffff;
-    font-size: inherit;
     border-radius: 4px;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
+    color: #ffffff;
     display: inline-block;
+    font-size: inherit;
     line-height: 0.95em;
     padding: 3px 3px 4px 3px;
     text-align: center;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
-    white-space: nowrap;
     text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 mark.kanji {
-    font-family: "Noto Sans JP", sans-serif;
     background: var(--color-kanji-gradient);
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 mark.radical {
@@ -101,76 +101,76 @@ mark.rdng {
 /** MARK: Answer Input
 */
 input[type="text"] {
+    border-radius: 10px;
+    color: white;
     font-family: "Fira Code", monospace;
+    font-size: 1.2em;
     font-weight: 300;
     margin-bottom: 1em;
-    color: white;
     max-width: 90%;
-    text-align: center;
     padding: 12px 0px;
-    border-radius: 10px;
-    font-size: 1.2em;
+    text-align: center;
 }
 
 .typed-answer {
     font-family: "Fira Code", monospace;
-    font-weight: "300";
     font-size: 1.5rem;
+    font-weight: "300";
     padding-bottom: 10px;
 }
 
 /** MARK: Hint
 */
 .button {
-    padding: 4px 16px;
     margin-bottom: 10px;
+    padding: 4px 16px;
 }
 
 button:after {
-    font-size: 18px;
-    padding: 0px 50px 0px 50px;
-    margin-bottom: 10px;
     content: "Show reading hint";
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 0px 50px 0px 50px;
 }
 
 #r-hint {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
   position: relative;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Style the inner hint box */
 #r-hint > div {
-  font-family: "Fira Code", monospace;
-  font-size: .8em;
   background: #777;
-  color: #fff;
   border: dashed 1px #222;
   border-radius: 10px;
-  padding: 20px;
+  color: #fff;
+  font-family: "Fira Code", monospace;
+  font-size: .8em;
   max-width: 80%;
+  padding: 20px;
   text-align: center;
 }
 
 /** MARK: Tags
     */
 .tag-box {
-    display: inline-block;
-    font-family: "Fira Code", monospace;
-    color: var(--color-main-text);
-    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.15);
     box-shadow: -2px 1px 5px rgba(0, 0, 0, 0.2) inset;
+    color: var(--color-main-text);
+    display: inline-block;
+    font-family: "Fira Code", monospace;
     font-size: 0.6em;
-    padding: 5px 10px 5px 10px;
     margin: 0px 5px 0px 0px;
+    overflow: hidden;
+    padding: 5px 10px 5px 10px;
 }
 
 #tags-container {
@@ -181,6 +181,7 @@ button:after {
 */
 .body-content {
     line-height: 1.5em;
+	padding: 0px 5px 15px 5px;
 }
 
 .hints-box {
@@ -190,7 +191,7 @@ button:after {
     font-family: "Fira Code", monospace;
     font-size: 0.8em;
     line-height: 1.5em;
-    padding: 0px 15px 15px 15px;
+    padding: 0px 20px 15px 20px;
 }
 
 .hints-box .title {

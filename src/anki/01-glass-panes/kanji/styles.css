@@ -11,55 +11,58 @@
 /* iPhone */
 .iphone {
 
-    .front { padding-top: 0px; }
-    
-        .section-1a .prompt {
-            align-self: end;
-            font-size: 3em;
-            justify-self: left;
-            margin-top: -5px;
-        }
-    
-        .meaning {
-            align-self: center;
-            font-size: 0.85em;
-            font-weight: 300px;
-            justify-self: left;
-            margin-top: -1em;
-        }
-    
-        .reading {
-            align-self: end;
-            font-size: 0.9em;
-            justify-self: left;
-            text-wrap: nowrap;
-            white-space: nowrap;
-        }
-    
-       .section-1a {
-            grid-template-columns: auto 50px;
-        }
-    
-        .sub-container {
-            grid-template-columns: 3em auto;
-        }
-    
-        .components {
-            font-size: 0.6em;
-        }
-    
-        .body-content {
-            font-size: 0.9em;
-        }
-    
-        .hints-box {
-            font-size: 0.75em;
-        }
-    
-        .stroke-order-img {
-            width: 50px;
-        }
+    .front {
+        padding-top: 0px;
     }
+
+    .section-1a .prompt {
+        align-self: end;
+        font-size: 3em;
+        justify-self: left;
+        margin-top: -5px;
+    }
+
+    .meaning {
+        align-self: center;
+        font-family: "Fira Code", monospace;
+        font-size: 0.85em;
+        font-weight: 400px;
+        justify-self: left;
+        margin-top: -1em;
+    }
+
+    .reading {
+        align-self: end;
+        font-size: 0.9em;
+        justify-self: left;
+        text-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .section-1a {
+        grid-template-columns: auto 50px;
+    }
+
+    .sub-container {
+        grid-template-columns: 3em auto;
+    }
+
+    .components {
+        font-size: 0.6em;
+    }
+
+    .body-content {
+        font-size: 0.9em;
+    }
+
+    .hints-box {
+        font-size: 0.75em;
+    }
+
+    .stroke-order-img {
+        width: 50px;
+    }
+}
 
 /** MARK: Front
 */
@@ -185,9 +188,9 @@
     align-self: start;
     border: collapse;
     color: #3d3d3d;
-    font-family: "Noto Sans", sans-serif;
-    font-size: 1.5em;
-    font-weight: 600;
+		font-family: "Fira Code", monospace;
+    font-size: 1.2em;
+    font-weight: 800;
     grid-area: meaning;
 }
 
@@ -203,8 +206,9 @@
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-.front>.prompt {
+.front .prompt {
     color: #ffffff;
+    font-family: "Noto Sans JP", sans-serif;
     padding: 20px 0px 10px 0px;
 }
 

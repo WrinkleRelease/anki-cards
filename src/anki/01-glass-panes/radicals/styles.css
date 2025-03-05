@@ -8,19 +8,14 @@
 
 /** MARK: Breakpoints
 */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* iPhone */
+
+.iphone {
     .prompt {
         font-size: 6em;
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .prompt {
-        font-size: 6em;
-    }
-}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -39,6 +34,7 @@
 }
 
 .prompt {
+		font-family: "Noto Sans JP", sans-serif;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -48,7 +44,7 @@
     background-color: #fafafa;
     background-image: url(_bg-bluepaper01.jpg);
     background-size: 15%;
-    border-radius: 40px;
+    border-radius: 20px;
     color: var(--color-radical);
     padding: 20px;
 }
@@ -63,12 +59,11 @@
         "section-1b";
     margin: 0 auto;
     overflow: hidden;
-    width: 90%;
 }
 
 .section-1a {
     backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.9);
     display: grid;
     grid-area: section-1a;
     grid-template-areas:
@@ -78,8 +73,8 @@
 }
 
 .section-1b {
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+		background-color: rgba(88, 191, 252, 0.2);
     display: grid;
     grid-area: section-1b;
     grid-auto-flow: row;

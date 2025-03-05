@@ -8,16 +8,18 @@
 
 /** MARK: Breakpoints 
 */
-/* iPhone */
-.iPhone {
+/* Mobile */
+.iphone {
 
     .prompt {
         font-size: 2.5em;
         margin-top: 0px;
     }
 
-    .section-1a .meaning {
-        font-size: 1.0em;
+    .meaning {
+        font-family: "Fira Code", monospace;
+        font-size: 0.9em;
+        font-weight: 600;
     }
 
     .meaning-container,
@@ -26,12 +28,12 @@
         width: 90%;
     }
 
-    .back .section-1a,
-    .back .section-2a {
+    .section-1a,
+    .section-2a {
         padding: 15px 1.5em 10px 1.5em;
     }
 
-    .back .section-3a {
+    .section-3a {
         padding: 15px 1.5em 5px 1.5em;
     }
 
@@ -39,17 +41,18 @@
         padding: 0px 1.5em 1.7em 1.0em;
     }
 
-    .section-2a .reading-type,
-    .section-3a .patterns-title {
+    .reading-type,
+    .patterns-title {
         font-size: 0.9em;
     }
 
-    .section-3a .use-patterns {
+    .use-patterns {
         display: inline-block;
+        font-size: 0.75em;
         margin: 0px 5px 5px 0px;
     }
 
-    .section-3a .patterns-title {
+    .patterns-title {
         align-self: center;
     }
 }
@@ -196,8 +199,9 @@
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-.front>.prompt {
+.front .prompt {
     color: #ffffff;
+    font-family: "Noto Sans JP", sans-serif;
     padding: 0px 0px 10px 0px;
 }
 
@@ -253,8 +257,8 @@
     background-color: rgba(255, 255, 255, 0.0);
     border-bottom: 1px dashed #4d4d4d;
     color: #3d3d3d;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 800;
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
     grid-area: meaning;
     padding: 15px 0px 20px 0px;
     text-align: center;
@@ -291,7 +295,7 @@
 .reading-type {
     align-self: end;
     color: #4d4d4d;
-    font-weight: 700;
+    font-weight: 600;
     grid-area: reading-type;
     justify-self: start;
 }
@@ -342,7 +346,7 @@
 .patterns-title {
     align-content: end;
     color: #4d4d4d;
-    font-weight: 700;
+    font-weight: 600;
     grid-area: patterns-title;
     justify-self: start;
 }
