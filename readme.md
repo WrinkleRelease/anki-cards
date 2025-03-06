@@ -5,7 +5,9 @@ I've created templates for the Anki flashcard program to assist in my Japanese l
 
 | Style | Note Types | Actively Maintained |
 |-------|------------|---------------------|
-| Glass Panes | `Radicals`, `Kanji`, `Vocab` | Yes |
+| [Glass Panes](/anki-cards/tree/main/src/anki/01-glass-panes) | `Radicals`, `Kanji`, `Vocab` | Yes |
+| Typed Paper | `Radicals`, `Kanji`, `Vocab` | WIP |
+| Index Cards | `Radicals`, `Kanji`, `Vocab` | WIP |
 | WaniKani Theme | `Radicals`, `Kanji`, `Vocab` | No|
 | Verb Conjugation | `Verbs` | Yes |
 
