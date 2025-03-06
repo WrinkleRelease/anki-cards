@@ -25,4 +25,7 @@
 
 #### Back
 ![vocab_back](https://github.com/user-attachments/assets/c2d16eec-651f-4a89-9214-e6d8caa83eb7)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 98d02c73c0d3e946002dc89c09bfc714674b514a
