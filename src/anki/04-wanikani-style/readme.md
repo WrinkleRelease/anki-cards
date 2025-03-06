@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-### [Radicals][wrinklerelease/anki-cards/anki/02-wanikani-style/radicals/readme.md]
+### [Radicals](https://github.com/WrinkleRelease/anki-cards/tree/main/src/anki/04-wanikani-style/radicals)
 
 #### Front
 
@@ -10,7 +10,7 @@
 
 ---
 
-### [Kanji][wrinklerelease/anki-cards/anki/02-wanikani-style/kanji/readme.md]
+### [Kanji](https://github.com/WrinkleRelease/anki-cards/tree/main/src/anki/04-wanikani-style/kanji)
 
 #### Front
 
@@ -19,9 +19,10 @@
 
 ---
 
-### [Vocab][wrinklerelease/anki-cards/anki/02-wanikani-style/vocab/readme.md]
+### [Vocab](https://github.com/WrinkleRelease/anki-cards/tree/main/src/anki/04-wanikani-style/vocab)
 
 #### Front
 
 #### Back
 ![vocab_back](https://github.com/user-attachments/assets/c2d16eec-651f-4a89-9214-e6d8caa83eb7)
+

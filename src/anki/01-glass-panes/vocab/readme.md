@@ -1,6 +1,7 @@
 # Vocab Card Template
 Style: `Glass Panes`
-Individual Files: `front.html`, `back.html`, `styles.css` Shared Files: `_bg-bluepaper01.jpg`, `_shared-styles.css`
+<br> Individual Files: `front.html`, `back.html`, `styles.css` 
+<br> Shared Files: `_bg-bluepaper01.jpg`, `_glasspanes-shared-styles.css`
 
 ## Features
 The `front` contains an input field that asks for the `Reading` of the words, not the meaning. Only one input field per side is supported by Anki. 

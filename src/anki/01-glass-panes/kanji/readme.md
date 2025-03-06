@@ -1,6 +1,7 @@
 # Kanji Card Template
 Style: `Glass Panes`
-Individual Files: `front.html`, `back.html`, `styles.css` Shared Files: `_bg-bluepaper01.jpg`, `_shared-styles.css`
+<br> Individual Files: `front.html`, `back.html`, `styles.css` 
+<br> Shared Files: `_bg-bluepaper01.jpg`, `_glasspanes-shared-styles.css`
 
 ## Shared Files
 All three note types (`vocab`, `kanji`, and `radicals`) depend on two shared files. These files are included 
