@@ -1,4 +1,4 @@
-# Anki Card Templates for Japanese
+# [Anki Card Templates for Japanese](https://github.com/WrinkleRelease/anki-cards/tree/main/src/anki)
 
 ## What is this?
 I've created templates for the Anki flashcard program to assist in my Japanese lessons. The available styles are listed below. 
@@ -20,7 +20,7 @@ This repository contains the `HTML`, `CSS` and `JavaScript` needed to style the 
 
 ---
 
-# Kanji Table Data
+# [Kanji Table Data](https://github.com/WrinkleRelease/anki-cards/tree/main/src/data)
 
 Created for my own use, I have uploaded a `.csv` compiled from various source. It contains all the kanji taught on WaniKani, tested for across the JLPT, and taught in school in Japan. Also provided are columns that allow sorting by frequency of use. 
 
