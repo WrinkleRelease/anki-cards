@@ -1,0 +1,111 @@
+<!-- Anki - Vocab Card - Typed Paper - r1.0 -->
+<!-- github.com/WrinkleRelease -->
+
+<!-- Remove After Testing -->
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+
+<div class="back">
+    <!-- MARK: Meaning Section 
+ -->
+    <div class="container-1a">
+        <div class="section-name">meaning</div>
+        <div class="meaning-section">
+            <div class="prompt">{{Vocabulary}}</div>
+            <div id="wtype-container"></div>
+            <div class="components">{{Components}}</div>
+        </div>
+    </div>
+
+    <div class="container-1b">
+        <div class="meaning">{{Meaning}}</div>
+        <div class="b-sub-section">
+            <div class="meaning-notes">{{Meaning Notes}}</div>
+        </div>
+    </div>
+
+    <!-- MARK: Reading Section 
+-->
+    <div class="container-2a">
+        <div class="section-name">reading</div>
+        <div class="reading-section">
+            <div class=reading-type>{{Reading Type}}</div>
+            <div class="reading">{{Reading}} </div>
+        </div>
+    </div>
+
+    <div class="container-2b">
+        <div class="b-sub-section">
+            <div class="reading-notes">{{Reading Notes}}</div>
+        </div>
+    </div>
+
+    <!-- Context Sentences 
+-->
+    <div class="container-3a">
+        <div class="section-name">context</div>
+        <div class="context-section">
+            <div class="patterns-title">Patterns of Use</div>
+            <div class="use-patterns"></div>
+        </div>
+    </div>
+
+    <div class="container-3b">
+        <div class="b-sub-section">
+            <div class="context-sentences">{{Context}}</div>
+        </div>
+    </div>
+
+    <!--MARK:  Tags 
+	-->
+    <div id="tags-container"></div>
+
+</div>
+
+<!-- MARK: JavaScript 
+-->
+<script>
+
+    // -- TAG SEPARATOR -- //
+    var tagsString = "{{Tags}}";
+
+    // Split the tags by space
+    var tagsArray = tagsString.split(" ");
+
+    // Get the container where the tags will be displayed
+    var container = document.getElementById("tags-container");
+
+    // Loop through each tag, create a span, and assign it a class
+    tagsArray.forEach(function (tag) {
+        var tagElement = document.createElement("span");
+        tagElement.className = "tag-box";
+        tagElement.textContent = tag;
+        container.appendChild(tagElement);
+    });
+
+    // -- PATTERNS-OF-USE SEPARATOR -- //
+    var patternString = "{{Patterns of Use}}";
+    var patternArray = patternString.split(",");
+
+    var container = document.getElementById("patterns-container");
+
+    patternArray.forEach(function (pattern) {
+        var patternElement = document.createElement("span");
+        patternElement.className = "use-patterns";
+        patternElement.textContent = pattern;
+        container.appendChild(patternElement);
+    });
+
+    // -- WORD TYPE SEPARATOR -- //
+    var wtypeString = "{{Word Type}}";
+    var wtypeArray = wtypeString.split(",");
+    var container = document.getElementById("wtype-container");
+
+    wtypeArray.forEach(function (wtype) {
+        var wtypeElement = document.createElement("span");
+        wtypeElement.className = "word-type";
+        wtypeElement.textContent = wtype;
+        container.appendChild(wtypeElement);
+    });
+
+</script>

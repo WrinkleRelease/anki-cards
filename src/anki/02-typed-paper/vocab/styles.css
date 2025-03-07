@@ -1,0 +1,393 @@
+/* Anki - Kanji Card - Typed Paper - r1.0 */
+/* github.com/WrinkleRelease */
+
+/* Remove After Testing */
+@import url("/src/anki/02-typed-paper/shared-files/_typedpaper-shared-styles.css");
+
+/** MARK: External Stylesheet
+*/
+@import url("_typedpaper-shared-styles.css");
+
+/** MARK: Breakpoints 
+*/
+/* Mobile */
+.iphone {
+
+    .prompt {
+        font-size: 2.5em;
+        margin-top: 0px;
+    }
+
+    .meaning {
+        font-family: "Prestige Elite Bold", monospace;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+
+    .meaning-container,
+    .reading-container,
+    .context-container {
+        width: 90%;
+    }
+
+    .section-1a,
+    .section-2a {
+        padding: 15px 1.5em 10px 1.5em;
+    }
+
+    .section-3a {
+        padding: 15px 1.5em 5px 1.5em;
+    }
+
+    .reading-type,
+    .patterns-title {
+        font-size: 0.9em;
+    }
+
+    .use-patterns {
+        display: inline-block;
+        font-size: 0.75em;
+        margin: 0px 5px 5px 0px;
+    }
+
+    .patterns-title {
+        align-self: center;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) {
+    .prompt {
+        font-size: 3.0em;
+        margin-top: -10 px;
+    }
+
+    .meaning {
+        font-size: 1.2em;
+    }
+
+    [class^="container-"] {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .patterns-title {
+        align-self: center;
+    }
+
+    .use-patterns {
+        display: inline-block;
+        margin: 0px 5px 0px 0px;
+    }
+}
+
+/** MARK: Front
+    */
+.front {
+    align-content: center;
+    background-color: var(--color-vocab);
+    border-radius: 20px;
+    color: #fafafa;
+    padding: 20px;
+}
+
+/** MARK: Back
+        */
+.back {
+    background-color: #a2b8bc;
+    background-image: url("_typedpaper-bg01.jpg");
+    background-size: 12%;
+    border-radius: 20px;
+    color: var(--color-text-main);
+    padding: 30px 0px 30px 0px;
+}
+
+.container-1a {
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    background-color: #141010;
+    border: 1px solid #1d1d1d;
+    color: transparent;
+    display: grid;
+    gap: 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . section-name"
+        "meaning-section meaning-section meaning-section";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    margin-top: 1.5em;
+    padding: 0px 0px 0px 0px;
+}
+
+.b-sub-section {
+    border-bottom: 1px dashed #1d1d1d;
+    border-left: 1px dashed #1d1d1d;
+    border-radius: 0px 0px 10px 10px;
+    border-right: 1px dashed #1d1d1d;
+    padding: 20px;
+    text-align: left;
+}
+
+.body-content {
+    font-family: "Prestige Elite", monospace;
+    font-weight: normal;
+}
+
+.section-name {
+    align-self: start;
+    background-color: #1d1d1d;
+    border-radius: 0px 0px 0px 15px;
+    color: var(--color-text-light);
+    font-family: "Prestige Elite", monospace;
+    font-size: 0.8em;
+    font-weight: 300;
+    grid-area: section-name;
+    justify-self: end;
+    padding: 3px 10px 5px 15px;
+
+}
+
+.meaning-section {
+    display: grid;
+    gap: 10px;
+    grid-area: meaning-section;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "prompt prompt prompt"
+        "word-type word-type word-type"
+        "components components components";
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    padding: 0px 25px 20px 25px;
+}
+
+.prompt {
+    color: var(--color-vocab);
+    font-family: "Noto Sans JP";
+    font-weight: 500;
+    grid-area: prompt;
+    margin-bottom: -5px;
+    text-shadow: var(--shadow-text-1);
+}
+
+.front .prompt {
+    color: var(--light-text);
+    padding-bottom: 10px;
+}
+
+.back .prompt {
+    color: var(--color-text-main);
+}
+
+.word-type {
+    align-self: start;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    color: var(--color-text-light);
+    font-family: "Prestige Elite Bold", monospace;
+    font-size: 1em;
+    font-weight: 500;
+    grid-area: word-type;
+    justify-content: start;
+    margin-bottom: 5px;
+    padding: 0px 10px 2px 10px;
+}
+
+.components {
+    align-self: start;
+    border: 1px dashed rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    color: #1d1d1d;
+    font-size: 0.9em;
+    font-weight: 350;
+    grid-area: components;
+    justify-self: start;
+    padding: 8px 10px 8px 10px;
+}
+
+.components mark {
+    margin-right: 3px;
+}
+
+.components mark:not(:first-child) {
+    margin-left: 2px;
+}
+
+.container-1b {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "meaning meaning meaning"
+        "meaning-notes meaning-notes meaning-notes";
+    grid-template-rows: auto auto;
+}
+
+.meaning {
+    background-color: #1d1d1d;
+    color: var(--color-text-light);
+    font-family: "Prestige Elite Bold";
+    font-size: 1.2em;
+    font-weight: 500;
+    grid-area: meaning;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+}
+
+.meaning-notes {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 0.95em;
+    grid-area: meaning-notes;
+    padding: 0px 0px 0px 0px;
+}
+
+/* MARK: Reading Section 
+*/
+.container-2a {
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    background-color: #141010;
+    border: 1px solid #1d1d1d;
+    color: transparent;
+    display: grid;
+    gap: 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        " . section-name"
+        "reading-section reading-section";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    margin-top: 1.5em;
+    padding: 0px 0px 0px 0px;
+}
+
+.reading-section {
+    display: grid;
+    gap: 5px;
+    grid-area: reading-section;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "reading-type"
+        "reading";
+    grid-template-rows: repeat(2, auto);
+    padding: 0px 25px 20px 25px;
+}
+
+.reading-type {
+    align-content: end;
+    color: #1d1d1d;
+    font-weight: 700;
+    grid-area: reading-type;
+    grid-area: reading-type;
+    justify-self: start;
+}
+
+.reading {
+    align-content: start;
+    font-family: "Noto Serif JP", sans-serif;
+    grid-area: reading;
+    justify-self: start;
+}
+
+.container-2b {
+    display: grid;
+    grid-template-areas:
+        "reading-notes";
+    grid-template-rows: auto;
+}
+
+.reading-notes {
+    grid-area: reading-notes;
+}
+
+
+/* MARK: Context Sentences 
+*/
+.container-3a {
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    background-color: #141010;
+    border: 1px solid #1d1d1d;
+    color: transparent;
+    display: grid;
+    gap: 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        " . section-name"
+        "context-section context-section";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    margin-top: 1.5em;
+    padding: 0px 0px 0px 0px;
+}
+
+.section-3a {
+    display: grid;
+    grid-area: section-3a;
+    grid-gap: 0px;
+    grid-template-areas:
+        "patterns-title section-name"
+        "use-patterns  section-name";
+    grid-template-columns: auto 35px;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 20px;
+}
+
+.context-section {
+    display: grid;
+    gap: 0px;
+    grid-area: context-section;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "patterns-title"
+        "use-patterns";
+    grid-template-rows: repeat(2, auto);
+    padding: 0px 25px 20px 25px;
+}
+
+.patterns-title {
+    align-content: end;
+    color: #1d1d1d;
+    font-weight: 700;
+    grid-area: patterns-title;
+    justify-self: start;
+}
+
+.use-patterns {
+    border: 1px dashed rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+    font-family: "Noto Serif JP", sans-serif;
+    font-size: 0.9em;
+    grid-area: use-patterns;
+    padding: 2px 5px 2px 5px;
+}
+
+.container-3b {
+    display: grid;
+    grid-template-areas:
+        "context-sentences";
+    grid-template-rows: auto;
+}
+
+*[class^="sen"] {
+    display: block;
+    font-family: "Noto Sans JP";
+    font-size: 1.0em;
+    margin-top: 0em;
+}
+
+*[class^="tran"] {
+    color: var(--color-translations);
+    display: block;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 0.75em;
+    margin-bottom: 1em;
+}
+
+*[class^="tran"]:last-child {
+    margin-bottom: 0em;
+}
