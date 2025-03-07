@@ -6,8 +6,8 @@ Style: `Glass Panes`
 ## Front Features
 The `front` contains an input field that asks for the `Reading` of the words, not the meaning. Only one input field per side is supported by Anki. 
 
-## Background Images
-This card calls, and tiles, a small background `.jpg`. Drop it in your /collections.media folder and it should sync fine with mobile versions of Anki.
+## Shared Files
+Place `_glasspanes-shared-styles.css` and `_bg-bluepaper01.jpg` in your `~/media.collections/` folder.
 
 ## Card Fields
 The Radicals `Note Type` contains the following fields

@@ -15,8 +15,8 @@ The `front` also contains a clickable field with a hint.
 A few JavaScript code blocks embedded in `back.html` allow for several fields[^2] in my cards to be pulled in as strings, separated, then formatted and displayed back onto the card in tidy little boxes.
 [^2]:`tags`, `components`, `onyomi-reading`, and `kunyomi-reading` fields.
 
-## Background Images
-This card calls, and tiles, a small background `.jpg`. Drop it in your /collections.media folder and it should sync fine with mobile versions of Anki.
+## Shared Files
+Place `_glasspanes-shared-styles.css` and `_bg-bluepaper01.jpg` in your `~/media.collections/` folder.
 
 ## Card Fields
 The Vocab `Note Type` contains the following fields
