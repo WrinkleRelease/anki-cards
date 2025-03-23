@@ -24,10 +24,10 @@ This repository contains the `HTML`, `CSS` and `JavaScript` needed to style the 
 
 Created for my own use, I have uploaded a `.csv` compiled from various source. It contains all the kanji taught on WaniKani, tested for across the JLPT, and taught in school in Japan. Also provided are columns that allow sorting by frequency of use. 
 
-I have not yet cross-referenced this with readings or meanings yet. If you'd like to do so, feel free to contribute. 
+I have not populated the spreadsheet with readings or meanings yet. If you'd like to do so, feel free to contribute. 
 
 ## Explanation of Tag Semantics
-The `::` acts as a nested folder in Anki. For this reason, the tags for any given Kanji use this to nest them once imported into Anki. For example, `WaniKani::L02` becomes `WaniKani/L02`, etc. 
+The `::` syntax as a nested folder in Anki. When imported, for example, `WaniKani::L02` becomes `WaniKani/L02`, etc. 
 
 ## About Frequency Counts
 There are many methodologies employed to measure the frequency of a particular kanji and they all vary slightly. I pulled my frequency data from the sites listed below under `Sources`. 
